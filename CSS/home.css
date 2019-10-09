@@ -1,0 +1,77 @@
+body{
+    background-color: rosybrown;
+    font-family: "Verdana", sans-serif;
+}
+
+#title-bar {
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+    color: white;
+}
+
+#top-menu-bar {
+    text-align: center;
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+.home {
+    background-color: white;
+    color: rosybrown;
+    border: none;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 22%;
+}
+
+.booking {
+    background-color: white;
+    color: rosybrown;
+    border: none;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    float: outside;
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 22%;
+}
+
+.gallery {
+    background-color: white;
+    color: rosybrown;
+    border: none;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    float: outside;
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 22%;
+}
+
+.contact {
+    background-color: white;
+    color: rosybrown;
+    border: none;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    float: right;
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 22%;
+}
