@@ -1,0 +1,126 @@
+body {
+    background-color: rosybrown;
+    font-family: "Verdana", sans-serif;
+}
+
+/* Sæt border-style: solid; for at se hvor de forskellige divs er */
+
+#aboutText {
+    align-content: center;
+    margin-top: 0%;
+    margin-left: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 60%;
+    height: 510px;
+    float: right;
+    background-color: rosybrown;
+    overflow: hidden;
+    border-style: ;
+}
+
+#billede {
+    margin: auto;
+    border-radius: 60%;
+    height: 250px;
+    width: 370px;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-style: ;
+}
+
+#contactText {
+    margin-top: 0%;
+    margin-left: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 30%;
+    height: 180px;
+    overflow: hidden;
+    border-style: ;
+}
+
+#locationText {
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 30%;
+    height: 450px;
+    border-style: ;
+}
+
+#title-bar {
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+    color: white;
+    border-style: ;
+}
+
+/* Text styling */
+
+p1{
+    font-size: 15px;
+    color: white;
+}
+
+h3{
+    color: white;
+}
+
+/* Kode til maps funktionen */
+.googleMaps{
+    overflow:hidden;
+    padding-bottom:70%;
+    position:relative;
+    height:0;
+    border-style: ;
+}
+
+.googleMaps iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position: absolute;
+    border-style: ;
+}
+
+/* Emojies før mail og tlf nr */
+a[href^="mailto"]::before {
+    content: "📨 ";
+}
+
+a[href^="tel"]::before {
+    content: "☎️ ";
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+/* Footer style */
+.footer {
+    border-style: ;
+    text-align: center;
+    color: dimgrey;
+
+}
+
+.footer a {
+    margin-top: 0;
+    text-decoration: none;
+    color: dimgrey;
+    font-size: small;
+}
+
+.footer p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: small;
+}
