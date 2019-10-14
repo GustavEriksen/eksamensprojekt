@@ -1,0 +1,85 @@
+ <!-- HTML for reservationsside. Bekræft knappen går til "mine reservationer"-siden. Man skal kun kunne komme ind på denne side ved at være logget ind. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Make Reservation</title>
+    
+    <!-- Jeg linker her til mit eget css stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../CSS/reservation.css">
+    
+</head>
+
+<!-- Her linker jeg til javascript filen -->
+
+<body>
+    
+    <!-- Overskrift for google calendar -->
+    <h2>Please check the calendar before requesting a reservation</h2>
+    
+    <!--Dette er google calendar html koden -->
+    <iframe src="https://calendar.google.com/calendar/embed?height=500&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FCopenhagen&amp;src=cmxkY2VnOGlnbmRpMHF0dTdpZHJncHV0b2tAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23D50000&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0" style="border-width:0" width="500" height="500" frameborder="0" scrolling="no"></iframe>
+    
+    
+    <!-- Formen laves her -->
+    <form action="/home.html"> <!--******** SKAL ÆNDRES TIL HOME PAGE///MINE RESERVATIONER************************-->
+      <div class="reservation-form">
+        <h1>Make a reservation</h1>
+        <p>Please fill in this form to request a reservation</p>
+
+        <label for="name"><b>Full Name</b></label>
+        <input type="text" placeholder="Enter Your Full Name" name="name" id="name" required>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Your Email" name="email" id="email" required>
+
+        <label for="telephone"><b>Telephone Number</b></label>
+        <input type="tel" placeholder="Your Telephone Number" name="telephone" id="telephone" required>
+          
+        <label for="check-in"><b>Check In</b></label>
+        <input type="date" placeholder="Check In Date" name="check-in" id="check-in" required>
+        
+        <label for="check-out"><b>Check Out</b></label>
+        <input type="date" placeholder="Check Out Date" name="check-out" id="check-out" required>
+        
+        <label for="adults"><b>Adults</b></label>
+        <input type="number" placeholder="Number of Adults"  name="adults" id="adults" required>
+
+        <label for="children"><b>Children</b></label>
+        <input type="number" placeholder="Number of Children (0-16 years old)" name="children" id="children" required>
+        
+        <label for="comments">Comments</label>
+        <textarea for="comments" name="comments" placeholder="Add Any Comments" style="height:200px" id="comments"></textarea>
+
+
+        <!--Knap for submit-->
+        <button type="submit" onclick="validate()" class="request-booking">Request Booking</button>
+      </div>
+    </form>
+
+    
+<!-- Dette virker - men skal laves til en .js inden aflevering-->
+<script>
+function validate() {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;        var telephone = document.getElementById('telephone').value;
+    var check_in = document.getElementById('check-in').value;
+    var check_out = document.getElementById('check-out').value;
+    var adults = document.getElementById('adults').value;
+    var children = document.getElementById('children').value;
+    var comments = document.getElementById('comments').value;  
+
+
+    alert("Your reservation has been sent to Vivian. You will be notified when the reservation request has been accepted/denied. Here is the data you have given us: " 
+          + "\nName: " + name 
+          + "\nEmail: " + email 
+          + "\nTelephone: " + telephone 
+          + "\nCheck In Date: " + check_in 
+          + "\nCheck Out Date: " + check_out 
+          + "\nAdults: " + adults 
+          + "\nChildren: " + children 
+          + "\nComments: " + comments); }
+</script>
+        
+</body>
+</html>

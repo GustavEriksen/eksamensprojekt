@@ -1,0 +1,49 @@
+/* Style for reservation.html */
+
+/*Styler body*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+}
+
+form {
+    margin-left: 500px;
+    margin-right: 500px;
+}
+/* Styler input bokse */
+input[type=text], input[type=date], input[type=number], textarea, input[type=tel] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Styler alle input bokse, når de er valgt som det felt der skal indtastes i. */
+input[type=text]:focus, input[type=date]:focus, input[type=number]:focus, textarea:focus, input[input=tel]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Style for Requst booking knappen */
+.request-booking {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 107%;
+    opacity: 0.9;
+}
+
+/* Sætter hover på Request Booking knappen */
+.request-booking:hover {
+    opacity: 1;
+}
+
+iframe,h2 {
+    margin-left: 500px;
+    margin-right: 500px;
+} 
