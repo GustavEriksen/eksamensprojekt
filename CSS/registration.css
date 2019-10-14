@@ -53,6 +53,26 @@ body{
 }
 
 /* Creating the Hover effect for the button */
-.form button:hover{
+.form button:hover,.form button:active{
+    background: #43A047;
     color: white;
 }
+
+/* Creating the style for the bottom message on the login form */
+.form .message{
+    margin: 15px 0 0;
+    color: aliceblue;
+    font-size: 12px;
+}
+
+/* Making it so that when clicked, the link won't change colour */
+.form .message a{
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+/* Making the login-form invisible unless clicked to */
+.form .login-form{
+    display: none;
+}
+
