@@ -9,10 +9,10 @@ Methods:
 
  */
 
-class Betaling {
-    constructor(KundeID, BookingID, Kort_Information) {
-        this.KundeID = KundeID;
-        this.BookingID = BookingID;
-        this.Kort_Information = Kort_Information;
+class payment {
+    constructor(userID, bookingID, card_information) {
+        this.userID = userID;
+        this.bookingID = bookingID;
+        this.card_information = card_information;
     }
 }

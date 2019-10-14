@@ -1,4 +1,4 @@
-// Mine Bookinger
+// Mine Bookinger - My bookings
 
 /*
 Dette script er tilknyttet "Mine Bookinger", hvor Adminstrator
@@ -9,10 +9,10 @@ Methods:
 
 */
 
-class Mine_Bookinger {
-    constructor(reservationID, reservation_dato, pris) {
+class my_bookings {
+    constructor(reservationID, reservation_date, price) {
         this.reservationID = reservationID;
-        this.reservations_dato = reservation_dato;
-        this.pris = pris;
+        this.reservations_date = reservation_date;
+        this.price = price;
     }
 }

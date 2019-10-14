@@ -1,4 +1,4 @@
-// Mine Reservationer
+// Mine Reservationer - My Reservations
 
 /*
 Dette script er tilknyttet "Mine Reservationer", hvor Bruger
@@ -10,10 +10,10 @@ Methods:
 
 */
 
-class mine_reservationer {
-    constructor(reservationID, reservation_dato, pris) {
+class my_reservations {
+    constructor(reservationID, reservation_date, price) {
         this.reservationID = reservationID;
-        this.reservations_dato = reservation_dato;
-        this.pris = pris;
+        this.reservations_date = reservation_date;
+        this.price = price;
     }
 }

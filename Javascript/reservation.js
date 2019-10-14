@@ -1,4 +1,4 @@
-// Reservationer
+// Reservationer - Reservations
 
 /*
 Dette script er tilknyttet "Reservation", hvor Bruger
@@ -11,10 +11,10 @@ Methods:
 */
 
 class reservation {
-    constructor(reservationID, pris, KundeID, BookingID) {
+    constructor(reservationID, price, userID, bookingID) {
         this.reservationID = reservationID;
-        this.pris = pris;
-        this.KundeID = KundeID;
-        this.BookingID = BookingID;
+        this.price = price;
+        this.userID = userID;
+        this.bookingID = bookingID;
     }
 }

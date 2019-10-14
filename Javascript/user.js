@@ -9,12 +9,12 @@ Methods:
 - Se "Mine Reservationer"
 */
 
-class Bruger {
-    constructor(name, email, telephone, birthdate, KundeID) {
+class user {
+    constructor(name, email, telephone, birthdate, userID) {
         this.name = name;
         this.email = email;
         this.telephone = telephone;
         this.birthdate = birthdate;
-        this.KundeID = KundeID;
+        this.userID = userID;
     }
 }

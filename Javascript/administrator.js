@@ -10,12 +10,12 @@ Methods:
  */
 
 
-class Adminstator {
-    constructor(name, email, telephone, birthdate, AdminID) {
+class adminstator {
+    constructor(name, email, telephone, birthdate, adminID) {
         this.name = name;
         this.email = email;
         this.telephone = telephone;
         this.birthdate = birthdate;
-        this.AdminID = AdminID;
+        this.adminID = adminID;
     }
 }
