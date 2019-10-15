@@ -10,8 +10,122 @@ body{
     color: white;
 }
 
-#top-menu-bar {
-    text-align: center;
-    margin-right: 1%;
-    margin-left: 1%;
+/* ul references to our list in the navigation bar */
+ul {
+    list-style: none;
+    background-color: white;
+    border-width: 1px 0;
+    margin: 0 auto;
+    width: 70%;
+    padding: 0;
+    overflow: hidden;
+    float: left;
 }
+
+
+li {
+    float: left; /* removes line breaks, and text floats left */
+}
+
+
+li a {
+    display: inline-block;
+    padding: 14px 16px;
+    margin: auto;
+    text-decoration: none;
+    text-align: center;
+    color: rosybrown;
+}
+
+
+li a:hover {
+    background-color: gold;
+}
+
+/* Below is the styling for the popup login button */
+    * {box-sizing: border-box;}
+
+    /* The design of the login button in the navigation bar: */
+    .open-button {
+        background-color: white;
+        color: rosybrown;
+        font-size: 16px;
+        padding: 14.5px 16px;
+        border: none;
+        cursor: pointer;
+        float: right;
+        width: 30%;
+    }
+
+    .open-button:hover {
+        background-color: gold;
+    }
+
+    /* The position of the popup box: */
+    .form-popup {
+        display: none;
+        position: fixed;
+        z-index: 9;
+        top: 103px;
+        right: 8px;
+    }
+
+    /* The design og the popup box: */
+    .form-container {
+        max-width: 300px;
+        padding: 10px;
+        background-color: white;
+    }
+
+    /* The design of the input forms in the popup: */
+    .form-container input[type=text], .form-container input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background-color: #f1f1f1;
+    }
+
+    /* The design of the cancel button (Login) on the top right: */
+    .form-container .cancel {
+        background-color: white;
+        color: rosybrown;
+        border: none;
+        float: right;
+        font-size: 16px;
+        margin-top: 2px;
+        cursor: pointer;
+    }
+
+    /* The design of the login button in the bottom of the popup: */
+    .form-container .btn {
+        background-color: darkgray;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .form-container .btn:hover {
+        background-color: grey;
+    }
+
+    /* The design of the register button: */
+    .form-container .register {
+        background-color: blanchedalmond;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 14px;
+        /* OBS NINA: find ud af hvordan man ændrer så den ikke ser klikket ud */
+    }
+
+    .register:hover {
+        background-color: burlywood;
+    }
