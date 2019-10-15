@@ -1,5 +1,9 @@
-body{
-    background-color: rosybrown;
+body {
+    background-color: rgb(201,201,201,0.3);
+    font-family: "Palatino", sans-serif;
+}
+
+p, li, a, * {
     font-family: "Palatino", sans-serif;
 }
 
@@ -7,8 +11,9 @@ body{
     text-align: center;
     margin: auto;
     font-size: 20px;
-    color: white;
+    color: #EAA63D;
 }
+
 
 /* ul references to our list in the navigation bar */
 ul {
@@ -35,7 +40,7 @@ li a {
     margin: auto;
     text-decoration: none;
     text-align: center;
-    color: rosybrown;
+    color: #76D2BB;
 }
 
 
@@ -56,7 +61,6 @@ li a:hover {
         cursor: pointer;
         float: right;
         width: 30%;
-        font-family: Palatino;
     }
 
     .open-button:hover {
@@ -66,10 +70,9 @@ li a:hover {
     /* The position of the popup box: */
     .form-popup {
         display: none;
-        position: fixed;
         z-index: 9;
-        top: 98px;
         right: 8px;
+        position: fixed;
     }
 
     /* The design of the popup box: */
@@ -86,7 +89,6 @@ li a:hover {
         margin: 5px 0 22px 0;
         border: none;
         background-color: #f1f1f1;
-        font-family: Palatino;
     }
 
     /* The design of the cancel button (Login) on the top right: */
@@ -98,7 +100,6 @@ li a:hover {
         font-size: 20px;
         margin-top: 2px;
         cursor: pointer;
-        font-family: Palatino;
     }
 
     /* The design of the login button in the bottom of the popup: */
@@ -111,7 +112,6 @@ li a:hover {
         width: 100%;
         margin-bottom: 10px;
         font-size: 14px;
-        font-family: Palatino;
     }
 
     .form-container .btn:hover {
@@ -128,7 +128,6 @@ li a:hover {
         width: 100%;
         margin-bottom: 10px;
         font-size: 14px;
-        font-family: Palatino;
         /* OBS NINA: find ud af hvordan man ændrer så den ikke ser klikket ud */
     }
 
