@@ -7,13 +7,16 @@
 <div class="login-page">
     <div class ="form">
     <form class="register-form">
-        <input type="email" placeholder="email">
-        <input type="text" placeholder="username">
-        <input type="password" placeholder="password">
-        <input type="password" placeholder="repeat password">
+        <input type="text" id="name" placeholder="full name" title="Please enter your full name" required>
+        <input type="date" id="birthday" placeholder="birthday" title="Please enter your birthday" required>
+        <input type="email" id="email" placeholder="email" title="Please enter your email" required>
+        <input type="text" id="usrname" placeholder="username" title="Please enter your username" required>
+        <input type="password" id="psw" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+        <input type="password" id="confirm_password" placeholder="repeat password" title="Please repeat your password" required>
         <button>Create</button>
         <p class="message">Already Registered? <a href="#">Login</a></p>
     </form>
+
 
     <form class="login-form">
         <input type="text" placeholder="username">
@@ -25,10 +28,19 @@
     </form>
 
     </div>
+
+    <div id="message">
+        <h3>Password must contain the following:</h3>
+        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+        <p id="number" class="invalid">A <b>number</b></p>
+        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+    </div>
+
 </div>
 
 <!-- Here we call the script code from jquery. jQuery is a JavaScript library designed to simplify HTML and it
- allows us to animate with ease the transition between a sign-up form and a log-in form-->
+ allows us to animate with ease the transition between a sign-up form and a log-in form when the user clicks the link -->
 <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
 
 <!-- In this script we code the transition animation, so that when clicking the message "a" (which in this case is either
@@ -37,6 +49,74 @@
     $('.message a').click(function(){
     $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
     });
+</script>
+
+<script>
+    var myInput = document.getElementById("psw");
+    var letter = document.getElementById("letter");
+    var capital = document.getElementById("capital");
+    var length = document.getElementById("length");
+
+    // Script to show a message box when password field is clicked
+    myInput.onfocus = function () {
+        document.getElementById("message").style.display = "block";
+    }
+
+    // Script to hide the message box when the user clicks outside of the password field
+    myInput.onblur = function () {
+        document.getElementById("message").style.display = "none";
+    }
+
+    // Script that starts when the user starts to write in the password field
+    myInput.onkeyup = function () {
+        // Check to see if there are lowercase letters
+        var lowerCaseLetters = /[a-z]/g;
+        if(myInput.value.match(lowerCaseLetters)){
+            letter.classList.remove("invalid");
+            letter.classList.add("valid");
+        } else {
+            letter.classList.remove("valid");
+            letter.classList.add("invalid");
+        }
+
+        // Check to see if there are capital letters
+        var upperCaseLetters = /[A-Z]/g;
+        if (myInput.value.match(upperCaseLetters)) {
+            capital.classList.remove("invalid");
+            capital.classList.add("valid");
+        } else {
+            capital.classList.remove("valid");
+            capital.classList.add("invalid");
+        }
+
+        // Check to see if there are numbers
+        var numbers = /[0-9]/g;
+        if (myInput.value.match(numbers)){
+            number.classList.remove("invalid");
+            number.classList.add("valid");
+        } else {
+            number.classList.remove("valid");
+            number.classList.add("invalid");
+        }
+
+
+        // Check to see if length is greater than 8
+        if (myInput.value.length >= 8) {
+            length.classList.remove("invalid");
+            length.classList.add("valid");
+        } else {
+            length.classList.remove("valid");
+            length.classList.add("invalid");
+        }
+    }
+
+function check_pass() {
+    if (document.getElementById("psw").value ==
+        document.getElementById("confirm password").value)
+        document.getElementById("submit").disable = false
+        } else {
+        document.getElementById("submit").disabled = true
+}
 </script>
 
 </body>
