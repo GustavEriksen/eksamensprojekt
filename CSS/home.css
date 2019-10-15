@@ -19,36 +19,33 @@ p, li, a, * {
     top: 8px;
 }
 
-/* ul references to our list in the navigation bar */
-ul {
-    list-style: none;
-    border-width: 1px 0;
-    margin: 0 auto;
-    width: 70%;
-    padding: 0;
-    float: left;
-    font-size: 20px;
-}
+/* Below is the styling for our navigation bar */
+    ul {
+        list-style: none;
+        border-width: 1px 0;
+        margin: 0 auto;
+        width: 70%;
+        padding: 0;
+        float: left;
+        font-size: 20px;
+    }
 
+    li {
+        float: left; /* removes line breaks, and text floats left */
+    }
 
-li {
-    float: left; /* removes line breaks, and text floats left */
-}
+    li a {
+        display: inline-block;
+        padding: 14px 16px;
+        margin: auto;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+    }
 
-
-li a {
-    display: inline-block;
-    padding: 14px 16px;
-    margin: auto;
-    text-decoration: none;
-    text-align: center;
-    color: white;
-}
-
-
-li a:hover {
-    background-color: rgb(291,291,291,0.2);
-}
+    li a:hover {
+        background-color: rgb(291,291,291,0.2);
+    }
 
 /* Below is the styling for the popup login button */
     * {box-sizing: border-box;}
@@ -63,7 +60,7 @@ li a:hover {
         cursor: pointer;
         position: fixed;
         float: right;
-        right: 10px;
+        right: 15px;
     }
 
     .open-button:hover {
