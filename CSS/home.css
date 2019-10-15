@@ -80,6 +80,7 @@ p, li, a, * {
         max-width: 300px;
         padding: 10px;
         background-color: white;
+        box-shadow: -10px 10px 8px rgb(0,0,0,0.5);
     }
 
     /* The design of the input forms in the popup: */
