@@ -1,4 +1,8 @@
 body {
+    background-image: url("../img/2-City-scene.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
     background-color: rgb(201,201,201,0.3);
     font-family: "Palatino", sans-serif;
 }
@@ -7,18 +11,11 @@ p, li, a, * {
     font-family: "Palatino", sans-serif;
 }
 
-#title-bar {
-    text-align: center;
-    margin: auto;
-    font-size: 20px;
-    color: #EAA63D;
-}
 
 
 /* ul references to our list in the navigation bar */
 ul {
     list-style: none;
-    background-color: white;
     border-width: 1px 0;
     margin: 0 auto;
     width: 70%;
@@ -40,12 +37,12 @@ li a {
     margin: auto;
     text-decoration: none;
     text-align: center;
-    color: #76D2BB;
+    color: white;
 }
 
 
 li a:hover {
-    background-color: gold;
+    background-color: rgb(291,291,291,0.2);
 }
 
 /* Below is the styling for the popup login button */
@@ -53,18 +50,17 @@ li a:hover {
 
     /* The design of the login button in the navigation bar: */
     .open-button {
-        background-color: white;
-        color: rosybrown;
+        border: 2px solid white;
         font-size: 20px;
-        padding: 14px 16px;
-        border: none;
+        background-color: transparent;
+        color: white;
+        padding: 14px;
         cursor: pointer;
         float: right;
-        width: 30%;
     }
 
     .open-button:hover {
-        background-color: gold;
+        background-color: rgb(291,291,291,0.2);
     }
 
     /* The position of the popup box: */
@@ -93,7 +89,6 @@ li a:hover {
 
     /* The design of the cancel button (Login) on the top right: */
     .form-container .cancel {
-        background-color: white;
         color: rosybrown;
         border: none;
         float: right;
@@ -134,3 +129,37 @@ li a:hover {
     .register:hover {
         background-color: burlywood;
     }
+
+
+#title {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 28px;
+    color: white;
+    text-shadow: 3px 3px rgb(0, 0, 0, 0.5);
+}
+
+#homeText {
+    margin-top: 100px;
+}
+
+/* Footer style */
+.footer {
+    color: dimgrey;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+
+.footer a {
+    margin-top: 0;
+    text-decoration: none;
+    color: dimgrey;
+    font-size: small;
+}
+
+.footer p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: small;
+}
