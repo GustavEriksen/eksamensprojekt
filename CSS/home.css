@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 body {
     background-color: rgb(201,201,201,0.3);
     font-family: "Palatino", sans-serif;
+=======
+body{
+    background-color: rgb(201, 201, 201, 0.34);
+    font-family: "Verdana", sans-serif;
+>>>>>>> a3cbe5049a09610bbd243be95530ff60dfe496d6
 }
 
 p, li, a, * {
