@@ -7,16 +7,17 @@
 <div class="login-page">
     <div class ="form">
     <form class="register-form">
+        <input type="email" placeholder="email">
         <input type="text" placeholder="username">
-        <input type="text" placeholder="password">
-        <input type="text" placeholder="email">
+        <input type="password" placeholder="password">
+        <input type="password" placeholder="repeat password">
         <button>Create</button>
         <p class="message">Already Registered? <a href="#">Login</a></p>
     </form>
 
     <form class="login-form">
         <input type="text" placeholder="username">
-        <input type="text" placeholder="password">
+        <input type="password" placeholder="password">
         <button>Login</button>
         <p class="message">Not Registered? <a href="#">Register</a>
 
@@ -26,15 +27,17 @@
     </div>
 </div>
 
+<!-- Here we call the script code from jquery. jQuery is a JavaScript library designed to simplify HTML and it
+ allows us to animate with ease the transition between a sign-up form and a log-in form-->
 <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
 
+<!-- In this script we code the transition animation, so that when clicking the message "a" (which in this case is either
+ "Already Registered?" or "Not Registered") it will animate with a toggle function -->
 <script>
     $('.message a').click(function(){
     $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
     });
-
 </script>
 
 </body>
-
 </html>
