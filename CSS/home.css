@@ -1,14 +1,25 @@
+<<<<<<< HEAD
+body {
+    background-color: rgb(201,201,201,0.3);
+    font-family: "Palatino", sans-serif;
+=======
 body{
-    background-color: rosybrown;
+    background-color: rgb(201, 201, 201, 0.34);
     font-family: "Verdana", sans-serif;
+>>>>>>> a3cbe5049a09610bbd243be95530ff60dfe496d6
 }
-   /*test*/
+
+p, li, a, * {
+    font-family: "Palatino", sans-serif;
+}
+
 #title-bar {
     text-align: center;
     margin: auto;
     font-size: 20px;
-    color: white;
+    color: #EAA63D;
 }
+
 
 /* ul references to our list in the navigation bar */
 ul {
@@ -20,6 +31,7 @@ ul {
     padding: 0;
     overflow: hidden;
     float: left;
+    font-size: 20px;
 }
 
 
@@ -34,7 +46,7 @@ li a {
     margin: auto;
     text-decoration: none;
     text-align: center;
-    color: rosybrown;
+    color: #76D2BB;
 }
 
 
@@ -49,8 +61,8 @@ li a:hover {
     .open-button {
         background-color: white;
         color: rosybrown;
-        font-size: 16px;
-        padding: 14.5px 16px;
+        font-size: 20px;
+        padding: 14px 16px;
         border: none;
         cursor: pointer;
         float: right;
@@ -64,13 +76,12 @@ li a:hover {
     /* The position of the popup box: */
     .form-popup {
         display: none;
-        position: fixed;
         z-index: 9;
-        top: 103px;
         right: 8px;
+        position: fixed;
     }
 
-    /* The design og the popup box: */
+    /* The design of the popup box: */
     .form-container {
         max-width: 300px;
         padding: 10px;
@@ -92,7 +103,7 @@ li a:hover {
         color: rosybrown;
         border: none;
         float: right;
-        font-size: 16px;
+        font-size: 20px;
         margin-top: 2px;
         cursor: pointer;
     }

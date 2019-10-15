@@ -6,14 +6,53 @@
     <title>Make Reservation</title>
     
     <!-- Jeg linker her til mit eget css stylesheet -->
-    <link rel="stylesheet" type="text/css" href="../CSS/reservation.css">
-    
+    <link rel="stylesheet" type="text/css" href="../CSS/booking.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/home.css">
+
+
 </head>
 
 <!-- Her linker jeg til javascript filen -->
 
 <body>
-    
+<div id="title-bar">
+    <h1>Viva la Vivian</h1>
+</div>
+
+<ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+<!-- Navigation bar -->
+
+<!-- Below is the button and popup-functions for the login form-->
+
+<button class="open-button" onclick="openForm() ">Login / Sign Up</button>
+
+<div class="form-popup" id="loginForm">
+    <form action="/action_page.php" class="form-container">
+
+        <button type="button" class="cancel" onclick="closeForm() ">Login / Sign Up</button>
+        <!-- Button for closing login form again -->
+
+        <br/><br/>
+
+        <label for="email"><b>Email</b> </label>
+
+
+        <input type="text" placeholder="Enter Email" name="email" required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+
+        <button type="submit" class="btn">Login</button>
+
+        <button type="button" class="register"> <a href="registration.html">Register</a></button>
+
+    </form>
+</div>
     <!-- Overskrift for google calendar -->
     <h2>Please check the calendar before requesting a reservation</h2>
     
@@ -60,6 +99,14 @@
     
 <!-- Dette virker - men skal laves til en .js inden aflevering-->
 <script>
+    function closeForm() {
+        document.getElementById("loginForm").style.display = "none";
+    }
+
+    function openForm() {
+        document.getElementById("loginForm").style.display = "block";
+    }
+
 function validate() {
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;        var telephone = document.getElementById('telephone').value;
