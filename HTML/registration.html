@@ -1,7 +1,7 @@
 <html>
 <head>
     <title> Login and Registration Form</title>
-    <link rel="stylesheet" type="text/css" href="../CSS/booking.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/registration.css">
 </head>
 <body>
 <div class="login-page">
@@ -13,7 +13,8 @@
         <input type="text" id="usrname" placeholder="username" title="Please enter your username" required>
         <input type="password" id="psw" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
         <input type="password" id="confirm_password" placeholder="repeat password" title="Please repeat your password" required>
-        <button>Create</button>
+        <input type="submit" name="submit" value="CREATE ACCOUNT" id="submit" disabled>
+
         <p class="message">Already Registered? <a href="#">Login</a></p>
     </form>
 
@@ -21,7 +22,7 @@
     <form class="login-form">
         <input type="text" placeholder="username">
         <input type="password" placeholder="password">
-        <button>Login</button>
+        <input type="submit" name="submit" value="LOGIN" id="submit" disabled>
         <p class="message">Not Registered? <a href="#">Register</a>
 
 
@@ -110,6 +111,9 @@
         }
     }
 
+/* This function is surpose to check to see if the password is correct in both inputs.
+    ATM it does not work
+
 function check_pass() {
     if (document.getElementById("psw").value ==
         document.getElementById("confirm password").value)
@@ -117,6 +121,8 @@ function check_pass() {
         } else {
         document.getElementById("submit").disabled = true
 }
+ */
+
 </script>
 
 </body>
