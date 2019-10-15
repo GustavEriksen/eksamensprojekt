@@ -1,8 +1,4 @@
 body {
-    background-image: url("../img/2-City-scene.jpg");
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
     background-color: rgb(201,201,201,0.3);
     font-family: "Palatino", sans-serif;
 }
@@ -12,6 +8,16 @@ p, li, a, * {
 }
 
 
+/* position of text on image */
+.homeTopContent {
+    position: relative;
+}
+
+.topMenuBar {
+    position: absolute;
+    align-content: center;
+    top: 8px;
+}
 
 /* ul references to our list in the navigation bar */
 ul {
@@ -20,7 +26,6 @@ ul {
     margin: 0 auto;
     width: 70%;
     padding: 0;
-    overflow: hidden;
     float: left;
     font-size: 20px;
 }
@@ -56,7 +61,9 @@ li a:hover {
         color: white;
         padding: 14px;
         cursor: pointer;
+        position: fixed;
         float: right;
+        right: 10px;
     }
 
     .open-button:hover {
@@ -89,7 +96,6 @@ li a:hover {
 
     /* The design of the cancel button (Login) on the top right: */
     .form-container .cancel {
-        color: rosybrown;
         border: none;
         float: right;
         font-size: 20px;
@@ -99,8 +105,7 @@ li a:hover {
 
     /* The design of the login button in the bottom of the popup: */
     .form-container .btn {
-        background-color: darkgray;
-        color: white;
+        background-color:rgb(118,210,187,0.5);
         padding: 16px 20px;
         border: none;
         cursor: pointer;
@@ -110,12 +115,13 @@ li a:hover {
     }
 
     .form-container .btn:hover {
-        background-color: grey;
+        background-color: rgb(118,210,187);
+        color: white;
     }
 
     /* The design of the register button: */
     .form-container .register {
-        background-color: blanchedalmond;
+        background-color: rgb(255,215,20,0.5);
         color: white;
         padding: 16px 20px;
         border: none;
@@ -127,26 +133,29 @@ li a:hover {
     }
 
     .register:hover {
-        background-color: burlywood;
+        background-color: rgb(255,215,20);
+        color: white;
     }
 
 
-#title {
-    text-align: center;
-    margin-top: 150px;
+.title {
     font-size: 28px;
     color: white;
     text-shadow: 3px 3px rgb(0, 0, 0, 0.5);
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 #homeText {
-    margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 /* Footer style */
 .footer {
     color: dimgrey;
-    position: fixed;
     bottom: 0;
     text-align: center;
 }
@@ -162,4 +171,9 @@ li a:hover {
     margin-top: 0;
     margin-bottom: 0;
     font-size: small;
+}
+
+img {
+    margin-top: -10px;
+    margin-left: -10px;
 }
