@@ -1,6 +1,6 @@
 body {
-    background-color: #EFEFEF;
-    font-family: "Verdana", sans-serif;
+    background-color: #f1f1f1;
+    font-family: "Palatino", sans-serif;
 }
 
 /* Sæt border-style: solid; for at se hvor de forskellige divs er */
@@ -14,7 +14,6 @@ body {
     width: 60%;
     height: 510px;
     float: right;
-    background-color: rosybrown;
     overflow: hidden;
     border-style: ;
 }
@@ -53,10 +52,9 @@ body {
 }
 
 #title-bar {
-    text-align: center;
+    text-align: left;
     margin: auto;
-    font-size: 20px;
-    color: #FF3B3F;
+    color: black;
     border-style: ;
 }
 
@@ -64,11 +62,11 @@ body {
 
 p1{
     font-size: 15px;
-    color: white;
+    color: black;
 }
 
 h3{
-    color: white;
+    color: black;
 }
 
 /* Kode til maps funktionen */
@@ -98,7 +96,7 @@ a[href^="tel"]::before {
     content: "☎️ ";
 }
 a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
