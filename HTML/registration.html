@@ -3,6 +3,7 @@
     <title> Login and Registration Form</title>
     <link rel="stylesheet" type="text/css" href="../CSS/registration.css">
     <link rel="stylesheet" type="text/css" href="../CSS/general.css">
+    <link href="../Javascript/registration.js">
 <body>
 
 
@@ -10,30 +11,28 @@
     <div class ="form">
     <form class="register-form">
         <input type="text" id="name" placeholder="full name" title="Please enter your full name" required>
+
         <input type="date" id="birthday" placeholder="birthday" title="Please enter your birthday" required>
+
         <input type="email" id="email" placeholder="email" title="Please enter your email" required>
+
         <input type="text" id="usrname" placeholder="username" title="Please enter your username" required>
+
         <input type="password" id="psw" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                title="Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+
         <input type="password" id="confirm_password" placeholder="repeat password" title="Please repeat your password" required>
-        <input type="submit" name="submit" value="CREATE ACCOUNT" id="submit" disabled>
+
+        <input type="submit" value="CREATE ACCOUNT" onclick="createUser()">
 
         <p class="message">Already Registered? <a href="#">Login</a></p>
     </form>
 
- <!-- Now we need our form to submit the collected data in the localStorage
-      We do this by creating a variable and assigning it an array of the collected data -->
-        <script>
-            var userInfo = [document.getElementById(name), document.getElementById(birthday),
-                document.getElementById(email), document.getElementById(usrname)];
-            console.log(userInfo)
-
-        </script>
 
     <form class="login-form">
         <input type="text" placeholder="username">
         <input type="password" placeholder="password">
-        <input type="submit" name="submit" value="LOGIN" id="submit" disabled>
+        <input type="login" name="login" value="LOGIN" id="login" disabled>
         <p class="message">Not Registered? <a href="#">Register</a>
 
 
@@ -122,19 +121,34 @@
         }
     }
 
-/* This functions purpose is to check to see if the password is correct in both inputs.
-    ATM it does not work
+this.name = document.getElementById("name").value;
+this.birthday= document.getElementById("birthday").value;
+this.email = document.getElementById("email").value;
+this.psw = document.getElementById("psw").value;
 
-function check_pass() {
-    if (document.getElementById("psw").value ==
-        document.getElementById("confirm password").value)
-        document.getElementById("submit").disable = false
-        } else {
-        document.getElementById("submit").disabled = true
+function createUser () {
+    localStorage.setItem("name", name.value);
+    localStorage.setItem("birthday", birthday.value);
+    localStorage.setItem("email", email.value);
+    localStorage.setItem("psw", psw.value);
+    alert("New user created");
+    console.log(localStorage);
 }
- */
+
+    /* This functions purpose is to check to see if the password is correct in both inputs.
+        ATM it does not work
+
+    function check_pass() {
+        if (document.getElementById("psw").value ==
+            document.getElementById("confirm password").value)
+            document.getElementById("submit").disable = false
+            } else {
+            document.getElementById("submit").disabled = true
+    }
+     */
 
 </script>
+
 
 </body>
 </html>

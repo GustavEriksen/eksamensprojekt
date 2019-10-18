@@ -9,7 +9,7 @@ Methods:
 - Se "Mine Reservationer"
 */
 
-class user {
+class User {
     constructor(name, email, telephone, birthdate, userID) {
         this.name = name;
         this.email = email;
