@@ -19,7 +19,7 @@ p, li, a, * {
 }
 
 /* Below is the styling for our navigation bar */
-ul {
+.navBar {
     list-style: none;
     border-width: 1px 0;
     margin: 0 auto;
@@ -39,7 +39,7 @@ li a {
     margin: auto;
     text-decoration: none;
     text-align: center;
-    color: white;
+    color: black;
 }
 
 li a:hover {
@@ -152,15 +152,20 @@ li a:hover {
 
 /* Footer style */
 .footer {
-    color: dimgrey;
-    bottom: 0;
+    color: white;
+    background-color: black;
+    bottom: -10%;
+    padding: 50px;
     text-align: center;
+    width: 102%;
+    margin: -10px;
+
 }
 
 .footer a {
     margin-top: 0;
     text-decoration: none;
-    color: dimgrey;
+    color: white;
     font-size: small;
 }
 

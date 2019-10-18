@@ -151,17 +151,27 @@ p, li, a, * {
     margin-bottom: 50px;
 }
 
+img {
+    margin-left: -10px;
+    margin-top: -10px;
+}
+
 /* Footer style */
 .footer {
-    color: dimgrey;
-    bottom: 0;
+    color: white;
+    background-color: black;
+    bottom: -10%;
+    padding: 50px;
     text-align: center;
+    width: 102%;
+    margin: -10px;
+
 }
 
 .footer a {
     margin-top: 0;
     text-decoration: none;
-    color: dimgrey;
+    color: white;
     font-size: small;
 }
 
@@ -169,9 +179,4 @@ p, li, a, * {
     margin-top: 0;
     margin-bottom: 0;
     font-size: small;
-}
 
-img {
-    margin-top: -10px;
-    margin-left: -10px;
-}
