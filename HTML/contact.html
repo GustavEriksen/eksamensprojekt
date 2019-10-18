@@ -12,54 +12,56 @@
     <h1>Viva la Vivian</h1>
 </div>
 
-<ul class="navBar">
-    <li><a href="home.html">Home</a></li>
-    <li><a href="booking.html">Booking</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact</a></li>
-</ul>
-<!-- Navigation bar -->
+<div id="navBarBackground">
+    <ul class="navBar">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <!-- Navigation bar -->
 
-<!-- Below is the button and popup-functions for the login form-->
+    <!-- Below is the button and popup-functions for the login form-->
 
-<button class="open-button" onclick="openForm() ">Login / Sign Up</button>
+    <button class="open-button" onclick="openForm() ">Login / Sign Up</button>
 
-<div class="form-popup" id="loginForm">
-    <form action="/action_page.php" class="form-container">
+    <div class="form-popup" id="loginForm">
+        <form action="/action_page.php" class="form-container">
 
-        <button type="button" class="cancel" onclick="closeForm() ">Login / Sign Up</button>
-        <!-- Button for closing login form again -->
+            <button type="button" class="cancel" onclick="closeForm() ">Login / Sign Up</button>
+            <!-- Button for closing login form again -->
 
-        <br/><br/>
+            <br/><br/>
 
-        <label for="email"><b>Email</b> </label>
+            <label for="email"><b>Email</b> </label>
 
 
-        <input type="text" placeholder="Enter Email" name="email" required>
+            <input type="text" placeholder="Enter Email" name="email" required>
 
-        <label for="password"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
 
-        <button type="submit" class="btn">Login</button>
+            <button type="submit" class="btn">Login</button>
 
-        <button type="button" class="register"> <a href="registration.html">Register</a></button>
+            <button type="button" class="register"> <a href="registration.html">Register</a></button>
 
-    </form>
+        </form>
+    </div>
+
+    <script>
+        function closeForm() {
+            document.getElementById("loginForm").style.display = "none";
+        }
+
+        function openForm() {
+            document.getElementById("loginForm").style.display = "block";
+        }
+    </script>
 </div>
-
-<script>
-    function closeForm() {
-        document.getElementById("loginForm").style.display = "none";
-    }
-
-    function openForm() {
-        document.getElementById("loginForm").style.display = "block";
-    }
-</script>
 
 <div id="aboutText" >
     <h3 align="center">About me</h3>
-    <img id="billede" src="../Images/profilbillede.jpeg">
+    <img id="billede" src="../img/profilbillede.jpeg" height="396" width="630"/>
     <p1>
         Hello my name is Vivian!
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
@@ -73,12 +75,7 @@
 
 <div id="contactText">
 
-    <h3 align="center">Contact Info</h3>
-    <ul style="list-style-type:none;" class="contactInfo">
-        <li><a href="mailto:vivian@gmail.com">vivian@gmail.com</a></li>
-        <br/>
-        <li><a href="tel:+4512345678">+45 12 34 56 78</a></li>
-    </ul>
+
 </div>
 
 <div id="locationText">
