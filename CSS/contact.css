@@ -40,6 +40,10 @@ body {
     border-style: ;
 }
 
+.contactInfo {
+
+}
+
 #locationText {
     margin-top: 1%;
     margin-left: 1%;
@@ -87,38 +91,13 @@ h3{
     border-style: ;
 }
 
-/* Emojies før mail og tlf nr */
-a[href^="mailto"]::before {
-    content: "📨 ";
-}
-
-a[href^="tel"]::before {
-    content: "☎️ ";
-}
 a {
     color: black;
     text-decoration: none;
 }
 
-
-
-/* Footer style */
-.footer {
-    border-style: ;
-    text-align: center;
-    color: dimgrey;
-
+img {
+    margin-left: -10px;
+    margin-right: -10px;
 }
 
-.footer a {
-    margin-top: 0;
-    text-decoration: none;
-    color: dimgrey;
-    font-size: small;
-}
-
-.footer p {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: small;
-}
