@@ -24,6 +24,8 @@
         <input type="password" id="psw" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                title="Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
 
+        <input type="number" id="teleNmb" placeholder="contact number" title="Please enter you contact number" required>
+
         <input type="password" id="confirm_password" placeholder="repeat password" title="Please repeat your password" required>
 
         <input type="submit" value="CREATE ACCOUNT" onclick="createUser()">
@@ -33,9 +35,9 @@
 
 
     <form class="login-form">
-        <input type="text" placeholder="username">
-        <input type="password" placeholder="password">
-        <!--<input type="submit" name="login" value="LOGIN" id="login" onclick=""> -->
+        <input type="text" id="usernameInput" placeholder="username">
+        <input type="password" id="passwordInput" placeholder="password">
+        <input type="submit" name="login" value="LOGIN" id="login" onclick="login">
         <p class="message">Not Registered? <a href="#">Register</a>
 
 
@@ -84,7 +86,7 @@
     // Script that starts when the user starts to write in the password field
     myInput.onkeyup = function () {
         // Check to see if there are lowercase letters
-        var lowerCaseLetters = /[a-z]/g;
+        var lowerCaseLetters = /[a-z]/;
         if(myInput.value.match(lowerCaseLetters)){
             letter.classList.remove("invalid");
             letter.classList.add("valid");
@@ -94,7 +96,7 @@
         }
 
         // Check to see if there are capital letters
-        var upperCaseLetters = /[A-Z]/g;
+        var upperCaseLetters = /[A-Z]/;
         if (myInput.value.match(upperCaseLetters)) {
             capital.classList.remove("invalid");
             capital.classList.add("valid");
@@ -104,7 +106,7 @@
         }
 
         // Check to see if there are numbers
-        var numbers = /[0-9]/g;
+        var numbers = /[0-9]/;
         if (myInput.value.match(numbers)){
             number.classList.remove("invalid");
             number.classList.add("valid");
@@ -129,6 +131,7 @@ this.birthday= document.getElementById("birthday").value;
 this.email = document.getElementById("email").value;
 this.psw = document.getElementById("psw").value;
 this.userName = document.getElementById("userName").value;
+this.teleNmb= document.getElementById("teleNmb").value;
 
 function createUser () {
     localStorage.setItem("fullname", fullname.value);
@@ -136,6 +139,7 @@ function createUser () {
     localStorage.setItem("email", email.value);
     localStorage.setItem("psw", psw.value);
     localStorage.setItem("userName", userName.value);
+    localStorage.setItem("teleNmb", teleNmb.value);
     alert("New user created");
     console.log(localStorage);
 }
