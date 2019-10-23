@@ -7,7 +7,7 @@
 
     <!-- Jeg linker her til mit eget css stylesheet -->
     <link rel="stylesheet" type="text/css" href="../CSS/booking.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/general.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/home.css">
 
 
 </head>
@@ -15,49 +15,61 @@
 <!-- Her linker jeg til javascript filen -->
 
 <body>
-<div id="title-bar">
-    <h1>Viva la Vivian</h1>
-</div>
+<br>
+<div class="homeTopContent">
+        <!-- Navigation bar -->
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
 
-<ul class="navBar">
-    <li><a href="home.html">Home</a></li>
-    <li><a href="booking.html">Booking</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact</a></li>
-</ul>
-<!-- Navigation bar -->
+        <!-- Below is the button and popup-functions for the login form-->
 
-<!-- Below is the button and popup-functions for the login form-->
+        <button class="open-button" onclick="openForm() ">Login / Sign Up</button>
 
-<button class="open-button" onclick="openForm() ">Login / Sign Up</button>
+        <div class="form-popup" id="loginForm">
+            <form action="/action_page.php" class="form-container">
 
-<div class="form-popup" id="loginForm">
-    <form action="/action_page.php" class="form-container">
+                <button type="button" class="cancel" onclick="closeForm() ">Login / Sign Up</button>
+                <!-- Button for closing login form again -->
 
-        <button type="button" class="cancel" onclick="closeForm() ">Login / Sign Up</button>
-        <!-- Button for closing login form again -->
+                <br/><br/>
 
-        <br/><br/>
-
-        <label for="email"><b>Email</b> </label>
+                <label for="email"><b>Email</b> </label>
 
 
-        <input type="text" placeholder="Enter Email" name="email" required>
+                <input type="text" placeholder="Enter Email" name="email" required>
 
-        <label for="password"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
 
-        <button type="submit" class="btn">Login</button>
+                <button type="submit" class="btn">Login</button>
 
-        <button type="button" class="register"> <a href="registration.html">Register</a></button>
+                <button type="button" class="register"> <a href="registration.html">Register</a></button>
 
-    </form>
+            </form>
+        </div>
+
+        <!-- Script for Login function in nav bar -->
+        <script>
+            function closeForm() {
+                document.getElementById("loginForm").style.display = "none";
+            }
+
+            function openForm() {
+                document.getElementById("loginForm").style.display = "block";
+            }
+        </script>
+    </div>
 </div>
 
 <!-- hide function -->
 <button onclick="myfunction()">Click Me</button>
 <!-- hide function -->
 <div id="mydiv">
+
 <!-- Overskrift for google calendar -->
 <h2>Please check the calendar before requesting a reservation</h2>
 
@@ -71,28 +83,28 @@
         <h1>Make a reservation</h1>
         <p>Please fill in this form to request a reservation</p>
 
-        <label for="name"><b>Full Name</b></label>
+        <label for="name"></label>
         <input type="text" placeholder="Enter Your Full Name" name="name" id="name" required>
 
-        <label for="email"><b>Email</b></label>
+        <label for="email"></label>
         <input type="text" placeholder="Enter Your Email" name="email" id="email" required>
 
-        <label for="telephone"><b>Telephone Number</b></label>
+        <label for="telephone"></label>
         <input type="tel" placeholder="Your Telephone Number" name="telephone" id="telephone" required>
 
-        <label for="check-in"><b>Check In</b></label>
+        <label for="check-in"></label>
         <input type="date" placeholder="Check In Date" name="check-in" id="check-in" required>
 
-        <label for="check-out"><b>Check Out</b></label>
+        <label for="check-out"></label>
         <input type="date" placeholder="Check Out Date" name="check-out" id="check-out" required>
 
-        <label for="adults"><b>Adults</b></label>
+        <label for="adults"></label>
         <input type="number" placeholder="Number of Adults"  name="adults" id="adults" required>
 
-        <label for="children"><b>Children</b></label>
+        <label for="children"></label>
         <input type="number" placeholder="Number of Children (0-16 years old)" name="children" id="children" required>
 
-        <label for="comments">Comments</label>
+        <label for="comments"></label>
         <textarea for="comments" name="comments" placeholder="Add Any Comments" style="height:200px" id="comments"></textarea>
 
 
@@ -106,12 +118,6 @@
 <!-- Dette virker - men skal laves til en .js inden aflevering-->
 <script>
 
-    function closeForm() {
-        document.getElementById("loginForm").style.display = "none";
-    }
-    function openForm() {
-        document.getElementById("loginForm").style.display = "block";
-    }
     // hide function
     function myfunction() {
         var x = document.getElementById("mydiv");
