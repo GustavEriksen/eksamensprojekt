@@ -19,8 +19,43 @@ p, li, a, * {
     top: 8px;
 }
 
+/* Hamburger menu */
+
+.navBar .icon {
+    display: none;
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .navBar a {display: none;}
+    .navBar a.icon {
+        float: left;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navBar.responsive {position: relative;}
+    .navBar.responsive .icon {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+    }
+    .navBar.responsive a {
+        display: block;
+        text-align: left;
+    }
+}
+
+
+
 /* Below is the styling for our navigation bar */
-    ul {
+    .navList {
         list-style: none;
         border-width: 1px 0;
         margin: 0 auto;
