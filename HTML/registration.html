@@ -13,13 +13,13 @@
 <div class="login-page">
     <div class ="form">
     <form class="register-form">
-        <input type="text" id="name" placeholder="full name" title="Please enter your full name" required>
+        <input type="text" id="fullname" placeholder="full name" title="Please enter your full name" required>
 
         <input type="date" id="birthday" placeholder="birthday" title="Please enter your birthday" required>
 
         <input type="email" id="email" placeholder="email" title="Please enter your email" required>
 
-        <input type="text" id="usrname" placeholder="username" title="Please enter your username" required>
+        <input type="text" id="userName" placeholder="username" title="Please enter your username" required>
 
         <input type="password" id="psw" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                title="Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
@@ -35,7 +35,7 @@
     <form class="login-form">
         <input type="text" placeholder="username">
         <input type="password" placeholder="password">
-        <input type="login" name="login" value="LOGIN" id="login" disabled>
+        <!--<input type="submit" name="login" value="LOGIN" id="login" onclick=""> -->
         <p class="message">Not Registered? <a href="#">Register</a>
 
 
@@ -124,16 +124,18 @@
         }
     }
 
-this.name = document.getElementById("name").value;
+this.fullname = document.getElementById("name").value;
 this.birthday= document.getElementById("birthday").value;
 this.email = document.getElementById("email").value;
 this.psw = document.getElementById("psw").value;
+this.userName = document.getElementById("userName").value;
 
 function createUser () {
-    localStorage.setItem("name", name.value);
+    localStorage.setItem("fullname", fullname.value);
     localStorage.setItem("birthday", birthday.value);
     localStorage.setItem("email", email.value);
     localStorage.setItem("psw", psw.value);
+    localStorage.setItem("userName", userName.value);
     alert("New user created");
     console.log(localStorage);
 }

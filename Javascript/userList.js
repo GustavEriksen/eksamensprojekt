@@ -6,6 +6,7 @@ if(localStorage.getItem('user') == null) {
         //Stringify the userlist and saves in localStorage
         var userListString = JSON.stringify(userList)
         localStorage.setItem('User', userListString)
+        // If the local storage is not empty, the user list equals the users already in the local storage
 } else {
     var userList = JSON.parse(localStorage.getItem('User'))
 }
