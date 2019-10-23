@@ -66,7 +66,7 @@
 </div>
 
 <!-- hide function -->
-<button onclick="myfunction()">Click Me</button>
+<button id="knap" onclick="myfunction()">Click Me</button>
 <!-- hide function -->
 <div id="mydiv">
 
@@ -129,12 +129,23 @@
     }
     function validate() {
         var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;        var telephone = document.getElementById('telephone').value;
+        var email = document.getElementById('email').value;
+        var telephone = document.getElementById('telephone').value;
         var check_in = document.getElementById('check-in').value;
         var check_out = document.getElementById('check-out').value;
         var adults = document.getElementById('adults').value;
         var children = document.getElementById('children').value;
         var comments = document.getElementById('comments').value;
+        console.log("Your reservation has been sent to Vivian. You will be notified when the reservation request has been accepted/denied. Here is the data you have given us: "
+            + "\nName: " + name
+            + "\nEmail: " + email
+            + "\nTelephone: " + telephone
+            + "\nCheck In Date: " + check_in
+            + "\nCheck Out Date: " + check_out
+            + "\nAdults: " + adults
+            + "\nChildren: " + children
+            + "\nComments: " + comments);
+
         alert("Your reservation has been sent to Vivian. You will be notified when the reservation request has been accepted/denied. Here is the data you have given us: "
             + "\nName: " + name
             + "\nEmail: " + email
@@ -143,7 +154,10 @@
             + "\nCheck Out Date: " + check_out
             + "\nAdults: " + adults
             + "\nChildren: " + children
-            + "\nComments: " + comments); }
+            + "\nComments: " + comments);
+
+    }
+
 </script>
 
 </body>

@@ -8,11 +8,9 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: white;
 }
-form {
-    margin-left: 500px;
-    margin-right: 500px;
-}
+
 /* Styler input bokse */
 input[type=text], input[type=date], input[type=number], textarea, input[type=tel] {
     width: 100%;
@@ -46,13 +44,6 @@ input[type=text]:focus, input[type=date]:focus, input[type=number]:focus, textar
     opacity: 1;
 }
 
-iframe,h2 {
-    margin-left: 500px;
-    margin-right: 500px;
+#knap {
+    margin-left: 50%;
 }
-#mydiv {
-      width: 100%;
-      padding: 50px 0;
-      text-align: center;
-      margin-top: 20px;
-  }
