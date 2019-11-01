@@ -126,6 +126,7 @@
         }
     }
 
+// Here we take the input data and assign them to their respective id values.
 this.fullname = document.getElementById("name").value;
 this.birthday= document.getElementById("birthday").value;
 this.email = document.getElementById("email").value;
@@ -133,6 +134,7 @@ this.psw = document.getElementById("psw").value;
 this.userName = document.getElementById("userName").value;
 this.teleNmb= document.getElementById("teleNmb").value;
 
+// We now create a function which creates a user array of the input-data.
 function createUser () {
     localStorage.setItem("fullname", fullname.value);
     localStorage.setItem("birthday", birthday.value);
