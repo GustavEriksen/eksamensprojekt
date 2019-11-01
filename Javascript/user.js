@@ -10,11 +10,12 @@ Methods:
 */
 
 class User {
-    constructor(name, email, telephone, birthdate, userID) {
-        this.name = name;
+    constructor(fullname, email, telephone, birthday, userName, password) {
+        this.fullname = fullname;
         this.email = email;
-        this.telephone = telephone;
-        this.birthdate = birthdate;
-        this.userID = userID;
+        this.teleNmb = telephone;
+        this.birthday = birthday;
+        this.userName = userName;
+        this.psw = password;
     }
 }
