@@ -1,23 +1,23 @@
-var myInput = document.getElementById("psw");
+var password = document.getElementById("psw");
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var length = document.getElementById("length");
 
     // Script to show a message box when password field is clicked
-myInput.onfocus = function () {
+password.onfocus = function () {
     document.getElementById("message").style.display = "block";
 }
 
     // Script to hide the message box when the user clicks outside of the password field
-myInput.onblur = function () {
+password.onblur = function () {
     document.getElementById("message").style.display = "none";
 }
 
     // Script that starts when the user starts to write in the password field
-myInput.onkeyup = function () {
+password.onkeyup = function () {
     // Check to see if there are lowercase letters
     var lowerCaseLetters = /[a-z]/g;
-        if(myInput.value.match(lowerCaseLetters)){
+        if(password.value.match(lowerCaseLetters)){
             letter.classList.remove("invalid");
             letter.classList.add("valid");
         } else {
@@ -27,7 +27,7 @@ myInput.onkeyup = function () {
 
     // Check to see if there are capital letters
     var upperCaseLetters = /[A-Z]/g;
-        if (myInput.value.match(upperCaseLetters)) {
+        if (password.value.match(upperCaseLetters)) {
             capital.classList.remove("invalid");
             capital.classList.add("valid");
         } else {
@@ -37,7 +37,7 @@ myInput.onkeyup = function () {
 
     // Check to see if there are numbers
     var numbers = /[0-9]/g;
-        if (myInput.value.match(numbers)){
+        if (password.value.match(numbers)){
             number.classList.remove("invalid");
             number.classList.add("valid");
         } else {
@@ -47,7 +47,7 @@ myInput.onkeyup = function () {
 
 
     // Check to see if length is greater than 8
-    if (myInput.value.length >= 8) {
+    if (password.value.length >= 8) {
         length.classList.remove("invalid");
         length.classList.add("valid");
     } else {

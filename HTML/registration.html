@@ -1,4 +1,6 @@
 <html>
+<!-- This pages purpose is to create a new user by requesting and taking input information and converting it to an array
+     that stores the user data in localStorage-->
 <head>
     <title> Login and Registration Form</title>
     <link rel="stylesheet" type="text/css" href="../CSS/registration.css">
@@ -9,7 +11,8 @@
     <link href="../Javascript/Login.js">
 <body>
 
-
+<!-- Here we create the login form. It has input fields for the required information that we need from a new user.
+     Each field is set as required. The password field also has certain parameters which the user must abide by.-->
 <div class="login-page">
     <div class ="form">
     <form class="register-form">
@@ -68,26 +71,28 @@
 </script>
 
 <script>
-    var myInput = document.getElementById("psw");
+    // In this script we want to create a security measure to make sure, that the user can see if their password meets the requirements set by the input-field
+
+    var password = document.getElementById("psw");
     var letter = document.getElementById("letter");
     var capital = document.getElementById("capital");
     var length = document.getElementById("length");
 
     // Script to show a message box when password field is clicked
-    myInput.onfocus = function () {
+    password.onfocus = function () {
         document.getElementById("message").style.display = "block";
     }
 
     // Script to hide the message box when the user clicks outside of the password field
-    myInput.onblur = function () {
+    password.onblur = function () {
         document.getElementById("message").style.display = "none";
     }
 
     // Script that starts when the user starts to write in the password field
-    myInput.onkeyup = function () {
+    password.onkeyup = function () {
         // Check to see if there are lowercase letters
         var lowerCaseLetters = /[a-z]/;
-        if(myInput.value.match(lowerCaseLetters)){
+        if(password.value.match(lowerCaseLetters)){
             letter.classList.remove("invalid");
             letter.classList.add("valid");
         } else {
@@ -97,7 +102,7 @@
 
         // Check to see if there are capital letters
         var upperCaseLetters = /[A-Z]/;
-        if (myInput.value.match(upperCaseLetters)) {
+        if (password.value.match(upperCaseLetters)) {
             capital.classList.remove("invalid");
             capital.classList.add("valid");
         } else {
@@ -107,7 +112,7 @@
 
         // Check to see if there are numbers
         var numbers = /[0-9]/;
-        if (myInput.value.match(numbers)){
+        if (password.value.match(numbers)){
             number.classList.remove("invalid");
             number.classList.add("valid");
         } else {
@@ -117,7 +122,7 @@
 
 
         // Check to see if length is greater than 8
-        if (myInput.value.length >= 8) {
+        if (password.value.length >= 8) {
             length.classList.remove("invalid");
             length.classList.add("valid");
         } else {
