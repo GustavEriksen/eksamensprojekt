@@ -8,6 +8,8 @@
     <!-- Jeg linker her til mit css stylesheet -->
     <link rel="stylesheet" type="text/css" href="../CSS/booking.css">
     <link rel="stylesheet" type="text/css" href="../CSS/home.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/general.css.css">
+
 
 
 </head>
@@ -49,7 +51,7 @@
 
             <input type="text" placeholder="Enter Email" name="email" required>
 
-            <label for="password"><b>Password</b></label>
+            <label id="password"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="password" required>
 
             <button type="submit" class="btn">Login</button>
@@ -61,9 +63,6 @@
 </div>
 
 
-<!-- hide function -->
-<button id="knap" onclick="myfunction()">Click Me</button>
-
 <div id="mydiv">
 <!-- Overskrift for google calendar -->
 <h2>Please check the calendar before requesting a reservation</h2>
@@ -72,8 +71,8 @@
 <iframe src="https://calendar.google.com/calendar/embed?height=500&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FCopenhagen&amp;src=cmxkY2VnOGlnbmRpMHF0dTdpZHJncHV0b2tAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23D50000&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0" style="border-width:0" width="500" height="500" frameborder="0" scrolling="no"></iframe>
 
     <!-- Formen laves her -->
-<form action="home.html"> <!--******** SKAL ÆNDRES TIL HOME PAGE///MINE RESERVATIONER************************-->
     <div class="reservation-form">
+        <form class="booking-form">
         <h1>Make a reservation</h1>
         <p>Please fill in this form to request a reservation</p>
 
@@ -103,8 +102,8 @@
 
 
         <!--Knap for submit-->
-        <button type="submit" onclick="validate()" class="request-booking">Request Booking</button>
-    </div>
+        <button type="submit" onclick="createBooking()" class="request-booking">Request Booking</button>
+
 </form>
 </div>
 
@@ -125,50 +124,26 @@
         } else {
         x.className = "navBar";
         }
-        }
-    // hide function
-    function myfunction() {
-        var x = document.getElementById("mydiv");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
     }
-    function validate() {
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var telephone = document.getElementById('telephone').value;
-        var check_in = document.getElementById('check-in').value;
-        var check_out = document.getElementById('check-out').value;
-        var adults = document.getElementById('adults').value;
-        var children = document.getElementById('children').value;
-        var comments = document.getElementById('comments').value;
-        console.log("Your reservation has been sent to Vivian. You will be notified when the reservation request has been accepted/denied. Here is the data you have given us: "
-            + "\nName: " + name
-            + "\nEmail: " + email
-            + "\nTelephone: " + telephone
-            + "\nCheck In Date: " + check_in
-            + "\nCheck Out Date: " + check_out
-            + "\nAdults: " + adults
-            + "\nChildren: " + children
-            + "\nComments: " + comments);
 
-        alert("Your reservation has been sent to Vivian. You will be notified when the reservation request has been accepted/denied. Here is the data you have given us: "
-            + "\nName: " + name
-            + "\nEmail: " + email
-            + "\nTelephone: " + telephone
-            + "\nCheck In Date: " + check_in
-            + "\nCheck Out Date: " + check_out
-            + "\nAdults: " + adults
-            + "\nChildren: " + children
-            + "\nComments: " + comments);
-
-    }
 
 </script>
 
+    <div class="footer">
+        <footer>
+            <p>Posted by: Gruppe31</p>
+            <p>Contact information: <a href="mailto:Gruppe31@gmail.com">
+                Gruppe31@gmail.com</a>
+                - <a href="tel:+4512345678">+45 12 34 56 78</a>
+                <br/>
+                <a href="#top">Back to the top</a>
+            </p>
+
+        </footer>
+    </div>
 </body>
 
+<script src="../Javascript/check_log_in.js"></script>
 <script src="../Javascript/booking.js"></script>
+
 </html>

@@ -13,6 +13,7 @@ body {
 
 #mydiv {
     text-align: center;
+    margin-top: 100px;
 }
 
 /* Styler input bokse */
@@ -41,6 +42,7 @@ input[type=text]:focus, input[type=date]:focus, input[type=number]:focus, textar
     cursor: pointer;
     width: 100%;
     opacity: 0.9;
+    margin-bottom: 100px;
 }
 
 /* Sætter hover på Request Booking knappen */
@@ -58,4 +60,5 @@ input[type=text]:focus, input[type=date]:focus, input[type=number]:focus, textar
     width: 40%;
     text-align: center;
     margin: 0 auto;
+
 }
