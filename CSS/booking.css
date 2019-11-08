@@ -11,6 +11,10 @@ body {
     color: white;
 }
 
+#mydiv {
+    text-align: center;
+}
+
 /* Styler input bokse */
 input[type=text], input[type=date], input[type=number], textarea, input[type=tel] {
     width: 100%;
@@ -18,7 +22,7 @@ input[type=text], input[type=date], input[type=number], textarea, input[type=tel
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
-    background: #f1f1f1;
+    background: white;
 }
 
 /* Styler alle input bokse, når de er valgt som det felt der skal indtastes i. */
@@ -41,9 +45,17 @@ input[type=text]:focus, input[type=date]:focus, input[type=number]:focus, textar
 
 /* Sætter hover på Request Booking knappen */
 .request-booking:hover {
-    opacity: 1;
+    opacity: 10;
 }
 
 #knap {
     margin-left: 50%;
+    margin-top: 100px;
+}
+
+.reservation-form {
+    border-radius: 5px;
+    width: 40%;
+    text-align: center;
+    margin: 0 auto;
 }

@@ -5,7 +5,7 @@
 <head>
     <title>Make Reservation</title>
 
-    <!-- Jeg linker her til mit eget css stylesheet -->
+    <!-- Jeg linker her til mit css stylesheet -->
     <link rel="stylesheet" type="text/css" href="../CSS/booking.css">
     <link rel="stylesheet" type="text/css" href="../CSS/home.css">
 
@@ -18,66 +18,60 @@
 <br>
 <div class="homeTopContent">
         <!-- Navigation bar -->
-        <ul>
+    <!-- Navigation bar -->
+    <div class="navBar" id="myNavBar">
+        <ul class="navList" id="jsMenu">
             <li><a href="home.html">Home</a></li>
             <li><a href="booking.html">Booking</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-
-        <!-- Below is the button and popup-functions for the login form-->
-
-        <button class="open-button" onclick="openForm() ">Login / Sign Up</button>
-
-        <div class="form-popup" id="loginForm">
-            <form action="/action_page.php" class="form-container">
-
-                <button type="button" class="cancel" onclick="closeForm() ">Login / Sign Up</button>
-                <!-- Button for closing login form again -->
-
-                <br/><br/>
-
-                <label for="email"><b>Email</b> </label>
+        <a href="javascript:void(0)" class="icon" onclick="openNav()">
+            <i class="fas fa-bars"></i>
+        </a>
+    </div>
 
 
-                <input type="text" placeholder="Enter Email" name="email" required>
+    <!-- Below is the button and popup-functions for the login form-->
 
-                <label for="password"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="password" required>
+    <button class="open-button" onclick="openForm() ">Login / Sign Up</button>
 
-                <button type="submit" class="btn">Login</button>
+    <div class="form-popup" id="loginForm">
+        <form action="/action_page.php" class="form-container">
 
-                <button type="button" class="register"> <a href="registration.html">Register</a></button>
+            <button type="button" class="cancel" onclick="closeForm() ">Login / Sign Up</button>
+            <!-- Button for closing login form again -->
 
-            </form>
-        </div>
+            <br/><br/>
 
-        <!-- Script for Login function in nav bar -->
-        <script>
-            function closeForm() {
-                document.getElementById("loginForm").style.display = "none";
-            }
+            <label for="email"><b>Email</b> </label>
 
-            function openForm() {
-                document.getElementById("loginForm").style.display = "block";
-            }
-        </script>
+
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <button type="submit" class="btn">Login</button>
+
+            <button type="button" class="register"> <a href="registration.html">Register</a></button>
+
+        </form>
     </div>
 </div>
 
+
 <!-- hide function -->
 <button id="knap" onclick="myfunction()">Click Me</button>
-<!-- hide function -->
-<div id="mydiv">
 
+<div id="mydiv">
 <!-- Overskrift for google calendar -->
 <h2>Please check the calendar before requesting a reservation</h2>
 
 <!--Dette er google calendar html koden -->
 <iframe src="https://calendar.google.com/calendar/embed?height=500&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FCopenhagen&amp;src=cmxkY2VnOGlnbmRpMHF0dTdpZHJncHV0b2tAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23D50000&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0" style="border-width:0" width="500" height="500" frameborder="0" scrolling="no"></iframe>
 
-
-<!-- Formen laves her -->
+    <!-- Formen laves her -->
 <form action="home.html"> <!--******** SKAL ÆNDRES TIL HOME PAGE///MINE RESERVATIONER************************-->
     <div class="reservation-form">
         <h1>Make a reservation</h1>
@@ -112,12 +106,26 @@
         <button type="submit" onclick="validate()" class="request-booking">Request Booking</button>
     </div>
 </form>
-
-    <!-- hide function -->
 </div>
+
 <!-- Dette virker - men skal laves til en .js inden aflevering-->
 <script>
+        function closeForm() {
+        document.getElementById("loginForm").style.display = "none";
+    }
 
+        function openForm() {
+        document.getElementById("loginForm").style.display = "block";
+    }
+        <!-- Script for the hamburger bar -->
+        function openNav() {
+        var x = document.getElementById("myNavBar");
+        if (x.className === "navBar") {
+        x.className += " responsive";
+        } else {
+        x.className = "navBar";
+        }
+        }
     // hide function
     function myfunction() {
         var x = document.getElementById("mydiv");
@@ -161,4 +169,6 @@
 </script>
 
 </body>
+
+<script src="../Javascript/booking.js"></script>
 </html>

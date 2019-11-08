@@ -65,18 +65,18 @@ body {
 /* Animering af background slideshow*/
 @keyframes animate {
     0%,100% {
-        background-image: url(/img/1.webp)
+        background-image: url(../img/1.webp)
     }
     20%{
-        background-image: url(/img/2.webp)
+        background-image: url(../img/2.webp)
     }
     40%{
-        background-image: url(/img/3.webp)
+        background-image: url(../img/3.webp)
     }
     60%{
-        background-image: url(/img/4.webp)
+        background-image: url(../img/4.webp)
     }
     80%{
-        background-image: url(/img/5.webp)
+        background-image: url(../img/5.webp)
     }
 }
