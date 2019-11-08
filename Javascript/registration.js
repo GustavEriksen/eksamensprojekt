@@ -66,18 +66,22 @@ var psw = document.getElementById("psw");
 var userName = document.getElementById("userName");
 var teleNmb= document.getElementById("teleNmb");
 
-// We now create a function which creates a user array of the input-data.
+// We now create a variable which creates a user array of the input-data.
 var allUsers
 if(localStorage.getItem("User") == null){
     allUsers = []
 } else {
     allUsers = JSON.parse(localStorage.getItem("User"))
 }
+
+
 function createUser () {
-    allUsers.push(new User(fullname.value, email.value, teleNmb.value, birthday.value, userName.value, psw.value))
-    localStorage.setItem("User", JSON.stringify(allUsers))
-    console.log(localStorage.getItem("User"))
-/*    localStorage.setItem("fullname", fullname.value);
+    allUsers.push(new User(fullname.value, email.value, teleNmb.value, birthday.value, userName.value, psw.value));
+    localStorage.setItem("User", JSON.stringify(allUsers));
+    console.log(localStorage.getItem("User"));
+
+    /* This was the old code which worked for one user but was overwritten if multiple users were created.
+    localStorage.setItem("fullname", fullname.value);
     localStorage.setItem("birthday", birthday.value);
     localStorage.setItem("email", email.value);
     localStorage.setItem("psw", psw.value);
