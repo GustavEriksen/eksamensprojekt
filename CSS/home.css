@@ -15,8 +15,8 @@ p, li, a, * {
 
     .topMenuBar {
         position: absolute;
-        align-content: center;
         top: 8px;
+        width: 100%;
     }
 
 /* Design of the responsive hamburger menu */
@@ -81,9 +81,7 @@ p, li, a, * {
         border-width: 1px 0;
         margin: 0 auto;
         padding: 0;
-        float: left;
         font-size: 20px;
-        position: fixed;
     }
 
     .navListBullets {
@@ -107,24 +105,22 @@ p, li, a, * {
     * {box-sizing: border-box;}
 
     /* The design of the login button in the navigation bar: */
-    .open-button {
+    .login-button {
         border: 2px solid white;
         font-size: 20px;
         background-color: transparent;
         color: white;
         padding: 14px;
         cursor: pointer;
-        position: fixed;
-        float: right;
-        right: 15px;
+        position: absolute;
     }
 
-    .open-button:hover {
+    .login-button:hover {
         background-color: rgb(291,291,291,0.2);
     }
 
     /* The position of the popup box: */
-    .form-popup {
+    .login-popup {
         display: none;
         z-index: 9;
         right: 8px;
@@ -132,7 +128,7 @@ p, li, a, * {
     }
 
     /* The design of the popup box: */
-    .form-container {
+    .login-container {
         max-width: 300px;
         padding: 10px;
         background-color: white;
@@ -140,7 +136,7 @@ p, li, a, * {
     }
 
     /* The design of the input forms in the popup: */
-    .form-container input[type=text], .form-container input[type=password] {
+    .login-container input[type=text], .login-container input[type=password] {
         width: 100%;
         padding: 15px;
         margin: 5px 0 22px 0;
@@ -149,7 +145,7 @@ p, li, a, * {
     }
 
     /* The design of the cancel button (Login) on the top right: */
-    .form-container .cancel {
+    .login-container .cancel {
         border: none;
         float: right;
         font-size: 20px;
@@ -158,7 +154,7 @@ p, li, a, * {
     }
 
     /* The design of the login button in the bottom of the popup: */
-    .form-container .btn {
+    .login-container .btn {
         background-color:rgb(118,210,187,0.5);
         padding: 16px 20px;
         border: none;
@@ -168,13 +164,13 @@ p, li, a, * {
         font-size: 14px;
     }
 
-    .form-container .btn:hover {
+    .login-container .btn:hover {
         background-color: rgb(118,210,187);
         color: white;
     }
 
     /* The design of the register button: */
-    .form-container .register {
+    .login-container .register {
         background-color: rgb(201,201,201,0.5);
         color: white;
         padding: 16px 20px;

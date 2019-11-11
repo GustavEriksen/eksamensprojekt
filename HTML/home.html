@@ -30,10 +30,10 @@
 
         <!-- Below is the button and popup-functions for the login form-->
 
-        <button class="open-button" onclick="openForm() ">Login / Sign Up</button>
+        <button class="login-button" onclick="openForm() ">Login / Sign Up</button>
 
-        <div class="form-popup" id="loginForm">
-            <form action="/action_page.php" class="form-container">
+        <div class="login-popup" id="loginForm">
+            <form action="/action_page.php" class="login-container">
                 <!-- action_page.php should be changed to the action it will include -->
 
                 <button type="button" class="cancel" onclick="closeForm() ">Login / Sign Up</button>
@@ -66,26 +66,7 @@
             </ul>
         </div>
 
-        <!-- Script for Login function in nav bar -->
-        <script>
-            function closeForm() {
-                document.getElementById("loginForm").style.display = "none";
-            }
 
-            function openForm() {
-                document.getElementById("loginForm").style.display = "block";
-            }
-         <!-- Script for the hamburger bar -->
-            function openHamburger() {
-                var hamburger = document.getElementById("hamburgerPopUp");
-                if (hamburger.className === "hamburgerBar") {
-                    hamburger.className += " responsive";
-                } else {
-                    hamburger.className = "hamburgerBar";
-                }
-            }
-
-        </script>
     </div>
 
     <!-- Header -->
@@ -132,4 +113,8 @@
 
     </footer>
 </body>
+
+<script src="../Javascript/login_navbar.js"></script>
+<script src="../Javascript/hamburger_menu.js"></script>
+
 </html>
