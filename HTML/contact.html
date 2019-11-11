@@ -5,6 +5,7 @@
     <title>Viva la Vivian - Contact</title>
     <link rel="stylesheet" type="text/css" href="../CSS/contact.css">
     <link rel="stylesheet" type="text/css" href="../CSS/general.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/contactForm.css">
 </head>
 <body>
 
@@ -88,6 +89,43 @@
 
 </div>
 
+<button class="open-ContactButton" onclick="openContactForm()">Contact me</button>
+
+<div class="contactFormPopUp" id="contactForm">
+    <form method="post" action="" class="contactClass">
+        <h2>Please fill in this form so I can get back to you!</h2>
+
+        <label for="subject"><b>Subject</b></label>
+        <input type="text" placeholder="Subject" name="subject" id="subject" required>
+
+        <label for="fullName"><b>Full Name</b></label>
+        <input type="text" placeholder="Enter Your Full Name" name="fullName" id="fullName" required>
+
+        <label for="email"><b>Email</b></label>
+        <input type="email" placeholder="Enter Your Email" name="email" id="email" required>
+
+        <label for="telephone"><b>Telephone Number</b></label>
+        <input type="number" placeholder="Your Telephone Number" name="telephone" id="telephone" required>
+
+        <label for="message"><b>Your message</b></label>
+        <textarea type="text" for="message" name="message" placeholder="Write your message here" style="height:100px" id="message" required></textarea>
+
+        <input type="submit" onclick="createContactInfo()" class="sendContact"/>
+        <button type="button" class="btn cancel" onclick="closeContactForm()">Close</button>
+    </form>
+</div>
+
+<script>
+    function openContactForm() {
+        document.getElementById("contactForm").style.display = "block";
+    }
+
+    function closeContactForm() {
+        document.getElementById("contactForm").style.display = "none";
+    }
+
+</script>
+
 <div class="bottomImageContact">
     <img src="../img/penthouse.png" height="auto" width="102%"/>
 </div>
@@ -107,4 +145,6 @@
 
 
 </body>
+<script type="text/javascript" src="contactClass.js"></script>
+<script type="text/javascript" src="contactform.js"></script>
 </html>
