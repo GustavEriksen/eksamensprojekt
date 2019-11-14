@@ -93,7 +93,8 @@
 
 <div class="contactFormPopUp" id="contactForm">
     <form method="post" action="" class="contactClass">
-        <h2>Please fill in this form so I can get back to you!</h2>
+        <h2>Contact me</h2>
+        <p>Please fill in this form so I can get back to you!</p>
 
         <label for="subject"><b>Subject</b></label>
         <input type="text" placeholder="Subject" name="subject" id="subject" required>
@@ -104,17 +105,16 @@
         <label for="email"><b>Email</b></label>
         <input type="email" placeholder="Enter Your Email" name="email" id="email" required>
 
-        <label for="telephone"><b>Telephone Number</b></label>
-        <input type="number" placeholder="Your Telephone Number" name="telephone" id="telephone" required>
-
         <label for="message"><b>Your message</b></label>
         <textarea type="text" for="message" name="message" placeholder="Write your message here" style="height:100px" id="message" required></textarea>
 
+        <!-- Clicking the submit button will run the scripts createContactInfo, that saves the info in localStorage -->
         <input type="submit" onclick="createContactInfo()" class="sendContact"/>
         <button type="button" class="btn cancel" onclick="closeContactForm()">Close</button>
     </form>
 </div>
 
+<!-- Script for openeing and closing the contact form -->
 <script>
     function openContactForm() {
         document.getElementById("contactForm").style.display = "block";
@@ -145,6 +145,6 @@
 
 
 </body>
-<script type="text/javascript" src="contactClass.js"></script>
-<script type="text/javascript" src="contactform.js"></script>
+<script type="text/javascript" src="../Javascript/contactClass.js"></script>
+<script type="text/javascript" src="../Javascript/contactForm.js"></script>
 </html>
