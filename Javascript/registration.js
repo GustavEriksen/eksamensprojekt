@@ -87,6 +87,7 @@ function createUser () {
     localStorage.setItem("psw", psw.value);
     localStorage.setItem("userName", userName.value);
     localStorage.setItem("teleNmb", teleNmb.value);*/
-    alert("New user created");
+    alert("New user created. You will now be redirected to the homepage for login");
+    document.location.href = "../HTML/home.html";
     console.log(localStorage);
 }
