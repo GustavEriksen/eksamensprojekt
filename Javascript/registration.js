@@ -66,15 +66,23 @@ var psw = document.getElementById("psw");
 var userName = document.getElementById("userName");
 var teleNmb= document.getElementById("teleNmb");
 
-// We now create a variable which creates a user array of the input-data.
+// We now create a series of scripts which will check to see if the user registers correctly.
+
+
+// We create an if statement to check if there are any users stored in localStorage.
+// If not, we create a new user array which is empty, if yes, we continue with the current array.
 var allUsers
 if(localStorage.getItem("User") == null){
     allUsers = []
+    console.log(allUsers);
+    console.log("Admin Only");
 } else {
     allUsers = JSON.parse(localStorage.getItem("User"))
+    console.log(allUsers);
+    console.log("Current users")
 }
 
-
+// We now create a function which creates a user array of the input-data.
 function createUser () {
     allUsers.push(new User(fullname.value, email.value, teleNmb.value, birthday.value, userName.value, psw.value));
     localStorage.setItem("User", JSON.stringify(allUsers));
