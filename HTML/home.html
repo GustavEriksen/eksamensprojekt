@@ -29,29 +29,26 @@
         </div>
 
 
-        <!-- Below is the button and popup-functions for the login form-->
-
-        <button class="login-button" onclick="openForm() ">Login / Sign Up</button>
+        <!-- Below is the button and popup for the login form-->
+        <button class="login-button" onclick="openLoginForm() ">Login / Sign Up</button>
 
         <div id="popupForLogin">
         <div class="login-popup" id="loginForm">
             <form action="/action_page.php" class="login-container">
                 <!-- action_page.php should be changed to the action it will include -->
 
-                <button type="button" class="cancel" onclick="closeForm() ">Login / Sign Up</button>
+                <button type="button" class="cancel" onclick="closeLoginForm() ">Login / Sign Up</button>
                 <!-- Button for closing login form again -->
 
                 <br/><br/>
 
-                <label for="email"><b>Email</b> </label>
+                <label for="usernameInput"><b>Username</b> </label>
+                <input type="text" placeholder="Enter Username" id="usernameInput">
 
+                <label for="passwordInput"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="passwordInput">
 
-                <input type="text" placeholder="Enter Email" name="email" required>
-
-                <label for="password"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="password" required>
-
-                <button type="submit" class="btn">Login</button>
+                <button type="submit" class="btn" id="login">Login</button>
 
                 <button type="button" class="register"> <a href="registration.html">Register</a></button>
 
@@ -120,5 +117,8 @@
 
 <script src="../Javascript/login_navbar.js"></script>
 <script src="../Javascript/hamburger_menu.js"></script>
+<script src="../Javascript/user.js"></script>
+<script src="../Javascript/userList.js"></script>
+<script src="../Javascript/Login.js"></script>
 
 </html>

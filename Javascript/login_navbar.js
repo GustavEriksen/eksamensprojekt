@@ -1,10 +1,10 @@
 // This function retrives the HTML tag 'onclick' to open the login popup in the nav bar
-function openForm() {
+function openLoginForm() {
     document.getElementById("loginForm").style.display = "block";
 }
 
 // This function retrives the HTML tag 'onclick' to close the login popup in the nav bar
-function closeForm() {
+function closeLoginForm() {
     document.getElementById("loginForm").style.display = "none";
 }
 

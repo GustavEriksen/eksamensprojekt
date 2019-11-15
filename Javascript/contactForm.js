@@ -1,3 +1,13 @@
+function openContactForm() {
+    document.getElementById("contactForm").style.display = "block";
+}
+
+function closeContactForm() {
+    document.getElementById("contactForm").style.display = "none";
+}
+
+
+
 var subject = document.getElementById("subject");
 var fullName = document.getElementById("fullName");
 var email = document.getElementById("email");

@@ -1,6 +1,190 @@
 body {
-    background-color: #f1f1f1;
+    background-color: pink;
     font-family: "Palatino", sans-serif;
+}
+
+/* Design of the responsive hamburger menu */
+
+/* Design of icon */
+.navBar .icon {
+    display: none;
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    top: 20px;
+    left: 230px;
+    cursor: pointer;
+}
+
+/* Making icon appear and navBar hide at certain width */
+@media screen and (max-width: 780px) {
+    .navBar .navListBullets {display: none;}
+    .navBar a.icon {
+        float: left;
+        display: block;
+    }
+}
+
+/* Making hamburgerBar appear onClick */
+@media screen and (max-width: 2000px) {
+    .hamburgerBar .HLB {display: none;}
+    .hamburgerBar.responsive {position: relative;}
+    .hamburgerBar.responsive .icon {
+        position: absolute;
+    }
+    .hamburgerBar.responsive a {
+        display: block;
+    }
+}
+
+.hamburgerList {
+    background-color: white;
+    list-style: none;
+    position: fixed;
+    z-index: 1;
+    top: -17px;
+    left: -8%;
+    width: 108%;
+    box-shadow: 0px 10px 8px rgb(0,0,0,0.5);
+}
+
+.hamburgerListBullets .HLB {
+    text-decoration: none;
+    text-align: center;
+    padding: 20px;
+    color: black;
+}
+
+.hamburgerListBullets .HLB:hover {
+    font-weight: bold;
+}
+
+/* Below is the styling for the navigation bar */
+.navList {
+    list-style: none;
+    border-width: 1px 0;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 20px;
+    position: absolute;
+}
+
+.navListBullets {
+    float: left; /* removes line breaks, and text floats left */
+}
+
+.navListBullets .NLB {
+    display: inline-block;
+    padding: 14px 16px;
+    margin: auto;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+.navListBullets .NLB:hover {
+    background-color: rgb(291,291,291,0.2);
+}
+
+#navBarTitle {
+    color: white;
+    font-size: 22px;
+    font-weight: 900;
+    display: inline-block;
+    padding: 14px 16px;
+    margin: auto;
+}
+
+/* Below is the styling for the popup login button */
+* {box-sizing: border-box;}
+
+/* The design of the login button in the navigation bar: */
+.login-button {
+    border: 2px solid white;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    padding: 14px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+
+.login-button:hover {
+    background-color: rgb(291,291,291,0.2);
+}
+
+/* The position of the popup box: */
+.login-popup {
+    display: none;
+    z-index: 9;
+    right: 8px;
+    position: fixed;
+}
+
+/* The design of the popup box: */
+.login-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: -10px 10px 8px rgb(0,0,0,0.5);
+}
+
+/* The design of the input forms in the popup: */
+.login-container input[type=text], .login-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background-color: #f1f1f1;
+}
+
+/* The design of the cancel button (Login) on the top right: */
+.login-container .cancel {
+    border: none;
+    float: right;
+    font-size: 20px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+/* The design of the login button in the bottom of the popup: */
+.login-container .btn {
+    background-color:rgb(118,210,187,0.5);
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.login-container .btn:hover {
+    background-color: rgb(118,210,187);
+    color: white;
+}
+
+/* The design of the register button: */
+.login-container .register {
+    background-color: rgb(201,201,201,0.5);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    /* OBS NINA: find ud af hvordan man ændrer så den ikke ser klikket ud */
+}
+
+.register:hover {
+    background-color: rgb(201,201,201);
+    color: white;
+}
+
+.contactContent {
+    position: absolute;
+    top: 80px;
 }
 
 /* Sæt border-style: solid; for at se hvor de forskellige divs er */
@@ -20,13 +204,11 @@ body {
 
 #billede {
     margin: auto;
-    border-radius: 60%;
     height: 250px;
     width: 370px;
     display: block;
     margin-top: 50px;
     margin-bottom: 50px;
-    border-style: ;
 }
 
 #contactText {
@@ -59,12 +241,6 @@ body {
     border-style: ;
 }
 
-#title-bar {
-    text-align: left;
-    margin: auto;
-    color: black;
-    border-style: ;
-}
 
 /* Text styling */
 
@@ -83,7 +259,6 @@ h3{
     padding-bottom:70%;
     position:relative;
     height:0;
-    border-style: ;
 }
 
 .googleMaps iframe{
