@@ -1,3 +1,4 @@
+// Here we create a class for the data, that we need to retrieve from request booking.
 class booking {
     constructor(fullname, email, telephone, check_in, check_out, adults, children, comments) {
         this.fullname = fullname;
@@ -12,7 +13,6 @@ class booking {
 }
 
 // Here we take the input data and assign them to their respective id values
-
     var fullname = document.getElementById("name");
     var email = document.getElementById("email");
     var telephone = document.getElementById("telephone");
@@ -27,23 +27,17 @@ class booking {
     if(localStorage.getItem("booking") == null){
         allBookings = []
     } else {
-        allBookings = JSON.parse(localStorage.getItem("booking"))
-    }
+        allBookings = JSON.parse(localStorage.getItem("booking"))}
+
+    // here we push all the new data into an array called booking - this is displayed under "application" when you inspect in browser.
     function createBooking () {
         allBookings.push(new booking(name.value, email.value, telephone.value, check_in.value, check_out.value, adults.value, children.value, comments.value))
         localStorage.setItem("booking", JSON.stringify(allBookings))
         console.log(localStorage.getItem("booking"))
         console.log(localStorage);
 
-    alert("Your reservation has been sent to Vivian. You will be notified when the reservation request has been accepted/denied. Here is the data you have given us: "
-        + "\nName: " + name
-        + "\nEmail: " + email
-        + "\nTelephone: " + telephone
-        + "\nCheck In Date: " + check_in
-        + "\nCheck Out Date: " + check_out
-        + "\nAdults: " + adults
-        + "\nChildren: " + children
-        + "\nComments: " + comments);
+        // Here the data is shown in console log.
+    alert("Your reservation has been sent to Vivian. You will be notified when the reservation request has been accepted/denied.");
+    }
 
-}
-
+    //retrieve
