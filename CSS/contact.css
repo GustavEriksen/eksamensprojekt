@@ -1,5 +1,5 @@
 body {
-    background-color: pink;
+    background-color: white;
     font-family: "Palatino", sans-serif;
 }
 
@@ -8,10 +8,10 @@ body {
 /* Design of icon */
 .navBar .icon {
     display: none;
-    color: white;
+    color: black;
     font-size: 24px;
     position: absolute;
-    top: 20px;
+    top: 26px;
     left: 230px;
     cursor: pointer;
 }
@@ -38,7 +38,7 @@ body {
 }
 
 .hamburgerList {
-    background-color: white;
+    background-color: #76D2BB;
     list-style: none;
     position: fixed;
     z-index: 1;
@@ -52,7 +52,7 @@ body {
     text-decoration: none;
     text-align: center;
     padding: 20px;
-    color: black;
+    color: white;
 }
 
 .hamburgerListBullets .HLB:hover {
@@ -62,7 +62,6 @@ body {
 /* Below is the styling for the navigation bar */
 .navList {
     list-style: none;
-    border-width: 1px 0;
     margin: 0 auto;
     padding: 0;
     font-size: 20px;
@@ -80,15 +79,15 @@ body {
     margin: auto;
     text-decoration: none;
     text-align: center;
-    color: white;
+    color: black;
 }
 
 .navListBullets .NLB:hover {
-    background-color: rgb(291,291,291,0.2);
+    background-color: rgb(118,210,187,0.2);
 }
 
 #navBarTitle {
-    color: white;
+    color: black;
     font-size: 22px;
     font-weight: 900;
     display: inline-block;
@@ -101,26 +100,28 @@ body {
 
 /* The design of the login button in the navigation bar: */
 .login-button {
-    border: 2px solid white;
+    border: 2px solid black;
     font-size: 20px;
-    background-color: transparent;
-    color: white;
+    color: black;
     padding: 14px;
     cursor: pointer;
     position: absolute;
     right: 10px;
+    top: 10px;
 }
 
 .login-button:hover {
-    background-color: rgb(291,291,291,0.2);
+    border: 2px solid #76D2BB;
+    color: #76D2BB;
 }
 
 /* The position of the popup box: */
 .login-popup {
     display: none;
     z-index: 9;
-    right: 8px;
-    position: fixed;
+    right: 9px;
+    position: absolute;
+    top: 12px;
 }
 
 /* The design of the popup box: */
@@ -183,9 +184,15 @@ body {
     color: white;
 }
 
+hr {
+    margin-top: 120px;
+    border-color: #76D2BB;
+    width: 80%;
+}
+
 .contactContent {
     position: absolute;
-    top: 80px;
+    top: 150px;
 }
 
 /* Sæt border-style: solid; for at se hvor de forskellige divs er */
