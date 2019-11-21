@@ -8,18 +8,18 @@ p {
     text-align: center;
 }
 
-.row > .column {
+.galleryRow1 > .galleryColumn1 {
     padding: 0 2px;
 
 }
 
-.row:after {
+.galleryRow1:after {
     content: "";
     display: table;
     clear: both;
 }
 
-.column {
+.galleryColumn1 {
     margin-top: 10px;
     padding: 2px;
     float: left;
@@ -27,29 +27,29 @@ p {
 
 }
 
-.row2 {
+.galleryRow2 {
     float: left;
     left: 10%;
 }
 
-.row2 > .column2 {
+.galleryRow2 > .galleryColumn2 {
     padding: 0 2px;
 }
 
-.row2:after {
+.galleryRow2:after {
     content: "";
     display: table;
     clear: both;
 }
 
-.column2 {
+.galleryColumn2 {
     float: left;
     width: 25%;
     margin-bottom: 30px;
 }
 
 /* The Modal (background) */
-.modal {
+.galleryModalClass {
     display: none;
     position: absolute;
     padding-top: 35px;
@@ -62,7 +62,7 @@ p {
 }
 
 /* Modal Content */
-.modal-content {
+.galleryModalContent {
     position: center;
     margin: auto;
     width: 90%;
@@ -87,7 +87,7 @@ p {
     cursor: pointer;
 }
 
-.mySlides {
+.gallerySlides {
     display: none;
 }
 
@@ -132,13 +132,13 @@ p {
     font-size: 20px;
 }
 
-.demo {
+.modalSmall {
     opacity: 0.65;
     margin-top: 0px;
 }
 
 .active,
-.demo:hover {
+.modalSmall:hover {
     opacity: 1;
 }
 
