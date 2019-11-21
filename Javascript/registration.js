@@ -78,8 +78,8 @@ if(localStorage.getItem("User") == null){
     console.log("Admin Only");
 } else {
     allUsers = JSON.parse(localStorage.getItem("User"))
+    console.log("Current users found in localStorage:")
     console.log(allUsers);
-    console.log("Current users")
 }
 
 // We now create a function which creates a user array of the input-data.
