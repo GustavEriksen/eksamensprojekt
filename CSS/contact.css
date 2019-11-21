@@ -20,7 +20,7 @@ body {
 }
 
 /* Making icon appear and navBar hide at certain width */
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 800px) {
     .navBar .navListBullets {display: none;}
     .navBar a.icon {
         float: left;
@@ -103,20 +103,21 @@ body {
 
 /* The design of the login button in the navigation bar: */
 .login-button {
-    border: 2px solid black;
     font-size: 20px;
-    color: black;
-    padding: 14px;
+    color: white;
+    padding: 15px;
     cursor: pointer;
     position: absolute;
-    right: 10px;
-    top: 10px;
-    background-color: white;
+    font-family: "Palatino";
+    right: 20px;
+    top: 12px;
+    border-style: none;
+    background-color: rgb(118,210,187,0.8);
 }
 
 .login-button:hover {
-    border: 2px solid #76D2BB;
-    color: #76D2BB;
+    background-color: rgb(118,210,187);
+    
 }
 
 /* The position of the popup box: */
@@ -149,8 +150,9 @@ body {
 .login-container .cancel {
     border: none;
     float: right;
+    font-family: "Palatino";
     font-size: 20px;
-    margin-top: 2px;
+    margin-top: 5px;
     cursor: pointer;
 }
 
@@ -203,10 +205,6 @@ hr {
 
 #aboutText {
     align-content: center;
-    margin-top: 0%;
-    margin-left: 1%;
-    padding-left: 1%;
-    padding-right: 1%;
     width: 60%;
     height: 510px;
     float: right;
@@ -243,14 +241,9 @@ hr {
 }
 
 #locationText {
-    margin-top: 1%;
-    margin-left: 1%;
-    margin-bottom: 1%;
-    padding-left: 1%;
-    padding-right: 1%;
+    margin-left: 10px;
+    margin-bottom: 30px;
     width: 30%;
-    height: 450px;
-    border-style: ;
 }
 
 
@@ -289,4 +282,32 @@ a {
 img {
     margin-left: -10px;
     margin-right: -10px;
+    margin-top: -100px;
 }
+
+/* Footer style */
+.footer {
+    color: black;
+    bottom: -10%;
+    padding: 50px;
+    text-align: center;
+    width: 102%;
+    margin: -10px;
+
+}
+
+.footer a {
+    margin-top: 0;
+    text-decoration: none;
+    color: black;
+    font-size: small;
+}
+
+.footer a:hover {
+    font-weight: bolder;
+}
+
+.footer p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: small;

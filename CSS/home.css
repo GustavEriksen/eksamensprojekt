@@ -1,10 +1,10 @@
 body {
-    background-color: #f1f1f1;
-    font-family: "Palatino", sans-serif;
+    background-color: white;
+    font-family: "Palatino", "Palatino Linotype", sans-serif;
 }
 
 p, li, a, * {
-    font-family: "Palatino", sans-serif;
+    font-family: "Palatino", "Palatino Linotype", sans-serif;
 }
 
 
@@ -27,13 +27,13 @@ p, li, a, * {
         color: white;
         font-size: 24px;
         position: absolute;
-        top: 10px;
-        left: 20px;
+        top: 12px;
+        left: 230px;
         cursor: pointer;
     }
 
     /* Making icon appear and navBar hide at certain width */
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 800px) {
         .navBar .navListBullets {display: none;}
         .navBar a.icon {
             float: left;
@@ -101,6 +101,22 @@ p, li, a, * {
     .navListBullets .NLB:hover {
         background-color: rgb(291,291,291,0.2);
     }
+
+    #navBarTitleHome {
+        color: white;
+        font-size: 22px;
+        font-weight: 900;
+        display: inline-block;
+        padding: 14px 16px;
+        margin: auto;
+    }
+
+
+
+
+
+
+
 
 /* Below is the styling for the popup login button */
     * {box-sizing: border-box;}
@@ -203,6 +219,7 @@ p, li, a, * {
 
 #homeText {
     margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 img {
@@ -210,10 +227,15 @@ img {
     margin-left: -2%;
 }
 
+hr {
+    width: 80%;
+    border-color: #76D2BB;
+}
+
+
 /* Footer style */
 .footer {
-    color: white;
-    background-color: black;
+    color: black;
     bottom: -10%;
     padding: 50px;
     text-align: center;
@@ -225,8 +247,12 @@ img {
 .footer a {
     margin-top: 0;
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: small;
+}
+
+.footer a:hover {
+    font-weight: bolder;
 }
 
 .footer p {
