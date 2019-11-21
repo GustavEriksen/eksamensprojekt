@@ -1,6 +1,9 @@
 body {
     background-color: white;
     font-family: "Palatino", "Palatino Linotype", sans-serif;
+    /* vi bruger både Palatino og Palatino Linotype da de
+    hver især er kompatible med forskellige browsere
+     */
 }
 
 /* Design of the responsive hamburger menu */
