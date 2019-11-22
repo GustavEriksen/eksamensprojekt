@@ -1,11 +1,18 @@
-h2 {
-    margin-top: 75px;
-    margin-left: 47%;
+#galleryHeader {
+    margin-top: 20px;
+    margin-left: 50%;
+    color: white;  /* skal vi virkelig have denne overskrift med? */
 }
 
-p {
+#galleryText {
     margin-top: 10px;
     text-align: center;
+}
+
+hr {
+    margin-top: 120px;
+    border-color: #76D2BB;
+    width: 80%;
 }
 
 .galleryRow1 > .galleryColumn1 {
