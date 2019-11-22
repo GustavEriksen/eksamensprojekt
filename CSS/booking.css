@@ -3,7 +3,7 @@
 /*Styler body*/
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: url("../img/ex.jpg") no-repeat center center fixed;
+  background: url("../img/kitchen.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -11,10 +11,14 @@ body {
     color: white;
 }
 
+
 #mydiv {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 130px;
+    color: black;
+    font-size: 12px;
 }
+
 
 /* Styler input bokse */
 input[type=text], input[type=date], input[type=number], textarea, input[type=tel] {
@@ -32,9 +36,9 @@ input[type=text]:focus, input[type=date]:focus, input[type=number]:focus, textar
   outline: none;
 }
 
-/* Style for Requst booking knappen */
+/* Style for Request booking knappen */
 .request-booking {
-    background-color: #4CAF50;
+    background-color: #76D2BB;
     color: white;
     padding: 16px 20px;
     margin: 8px 0;
@@ -50,7 +54,7 @@ input[type=text]:focus, input[type=date]:focus, input[type=number]:focus, textar
     opacity: 10;
 }
 
-#knap {
+#knap { /* NYT NAVN */
     margin-left: 50%;
     margin-top: 100px;
 }
@@ -60,5 +64,11 @@ input[type=text]:focus, input[type=date]:focus, input[type=number]:focus, textar
     width: 40%;
     text-align: center;
     margin: 0 auto;
+    margin-top: 50px;
+}
 
+.footer {
+    background-color: rgb(255,255,255,0.6);
+    padding: 20px !important;
+    margin-bottom: 20px !important;
 }
