@@ -10,7 +10,7 @@ Methods:
  */
 
 
-class adminstator {
+class adminstrator {
     constructor(name, email, telephone, birthdate, adminID) {
         this.name = name;
         this.email = email;
