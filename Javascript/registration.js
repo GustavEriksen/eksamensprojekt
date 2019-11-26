@@ -8,12 +8,12 @@ var length = document.getElementById("length");
 // Script to show a message box when password field is clicked
 password.onfocus = function () {
     document.getElementById("message").style.display = "block";
-}
+};
 
 // Script to hide the message box when the user clicks outside of the password field
 password.onblur = function () {
     document.getElementById("message").style.display = "none";
-}
+};
 
 // Script that starts when the user starts to write in the password field
 password.onkeyup = function () {
@@ -56,7 +56,7 @@ password.onkeyup = function () {
         length.classList.remove("valid");
         length.classList.add("invalid");
     }
-}
+};
 
 // Here we take the input data and assign them to their respective id values.
 var fullname = document.getElementById("fullname");
@@ -66,21 +66,23 @@ var psw = document.getElementById("psw");
 var userName = document.getElementById("userName");
 var teleNmb= document.getElementById("teleNmb");
 
-// We now create a series of "if" statements, which will check to see if the user registers correctly. All of them will be contained in a function.
+// We now create a series of "if" statements, which will check to see if the user registers correctly.
+// All of them will be contained in a function which is called upon from the submit form in registration.html
 function UserCreationControl() {
     var messageAlert = "";
-    var booleanAlert = true;
+    var booleanCheck = true;
 
     // "if" statement to control if user has entered a name
     if (fullname.value===""){
        messageAlert += "Please enter your name ";
-       booleanAlert = false;
-       console.log(messageAlert, booleanAlert)
+       booleanCheck = false;
+       console.log(messageAlert, booleanCheck)
     }
 
+    // "if" statement to control if user has entered a date of birth
     if (birthday.value===""){
         messageAlert += "Please enter your date of birth ";
-        booleanAlert = false;
+        booleanCheck = false;
     }
 
     var dateGiven = birthday;
@@ -88,30 +90,38 @@ function UserCreationControl() {
     dateGiven = new Date(dateGiven);
     if (dateGiven > dateToday){
         messageAlert += "Please enter a correct date of birth ";
-        booleanAlert = false;
+        booleanCheck = false;
     }
 
+    // "if" statement to check if user has entered a contact email
     if (email.value===""){
         messageAlert += "Please enter you contact email ";
-        booleanAlert = false;
+        booleanCheck = false;
     }
 
+    // "if" statement to check if user has entered a password
     if (psw.value===""){
         messageAlert += "Please enter a correct password ";
-        booleanAlert = false;
+        booleanCheck = false;
     }
 
+    // "if" statement to check if user has entered
     if (userName===""){
         messageAlert += "Please enter a Username ";
-        booleanAlert = false;
+        booleanCheck = false;
     }
 
+    // "if" statement to check if user has entered a contact number
     if (teleNmb===""){
         messageAlert += "Please enter a contact number ";
-        booleanAlert = false;
+        booleanCheck = false;
     }
 
-    if (booleanAlert === false){
+    // "if" statement to check if the booleanCheck is false. If it is false, then the input from the user does not meet
+    // the criteria for one or more of the above "if" statements. It then alerts the user to which of the statements
+    // are filled incorrectly. If the booleanCheck is true, then the user has filled out the form correctly and a
+    // new user is created using the createUser function.
+    if (booleanCheck === false){
         alert(messageAlert);
     } else {
         createUser();
