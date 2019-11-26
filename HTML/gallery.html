@@ -4,68 +4,218 @@
     <meta charset="UTF-8">
     <title>Viva la Vivian - Gallery</title>
     <link rel="stylesheet" type="text/css" href="../CSS/general.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/gallery.css">
+    <script src="https://kit.fontawesome.com/291b7663b2.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div id="title-bar">
-    <h1>Viva la Vivian</h1>
+
+
+<!-- Navigation bar -->
+<div class="navBar" id="myNavBar">
+    <ul class="navList" id="jsMenu">
+        <li class="navListBullets" id="navBarTitle">VIVA LA VIVIAN</li>
+        <li class="navListBullets"><a class="NLB" href="home.html">Home</a></li>
+        <li class="navListBullets"><a class="NLB" href="booking.html">Booking</a></li>
+        <li class="navListBullets"><a class="NLB" href="gallery.html">Gallery</a></li>
+        <li class="navListBullets"><a class="NLB" href="contact.html">Contact</a></li>
+    </ul>
+    <a href="javascript:void(0)" class="icon" onclick="openHamburger()">
+        <i class="fas fa-bars"></i> <!-- Name of the icon from online database -->
+    </a>
 </div>
 
-<ul class="navBar">
-    <li><a href="home.html">Home</a></li>
-    <li><a href="booking.html">Booking</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact</a></li>
-</ul>
-<!-- Navigation bar -->
+<!-- Below is the button and popup for the login form-->
+<button class="login-button" onclick="openLoginForm() ">Login / Sign Up</button>
+
 
 <!-- Below is the button and popup-functions for the login form-->
+<div id="popupForLogin">
+    <div class="login-popup" id="loginForm">
+        <form action="/action_page.php" class="login-container">
+            <!-- action_page.php should be changed to the action it will include -->
 
-<button class="open-button" onclick="openForm() ">Login / Sign Up</button>
+            <button type="button" class="cancel" onclick="closeLoginForm() ">Login / Sign Up</button>
+            <!-- Button for closing login form again -->
 
-<div class="form-popup" id="loginForm">
-    <form action="/action_page.php" class="form-container">
+            <br/><br/>
 
-        <button type="button" class="cancel" onclick="closeForm() ">Login / Sign Up</button>
-        <!-- Button for closing login form again -->
+            <label for="usernameInput"><b>Username</b> </label>
+            <input type="text" placeholder="Enter Username" id="usernameInput">
 
-        <br/><br/>
+            <label for="passwordInput"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" id="passwordInput">
 
-        <label for="email"><b>Email</b> </label>
+            <button type="submit" class="btn" id="login">Login</button>
 
+            <button type="button" class="register"> <a href="registration.html">Register</a></button>
 
-        <input type="text" placeholder="Enter Email" name="email" required>
-
-        <label for="password"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
-
-        <button type="submit" class="btn">Login</button>
-
-        <button type="button" class="register"> <a href="registration.html">Register</a></button>
-
-    </form>
+        </form>
+    </div>
 </div>
 
-<script>
-    function closeForm() {
-        document.getElementById("loginForm").style.display = "none";
-    }
+<!-- Below is the popup for the hamburger-menu in nav bar -->
+<div class="hamburgerBar" id="hamburgerPopUp">
+    <ul class="hamburgerList" id="hamburger">
+        <li class="hamburgerListBullets"><a class="HLB" href="home.html">Home</a></li>
+        <li class="hamburgerListBullets"><a class="HLB" href="booking.html">Booking</a></li>
+        <li class="hamburgerListBullets"><a class="HLB" href="gallery.html">Gallery</a></li>
+        <li class="hamburgerListBullets"><a class="HLB" href="contact.html">Contact</a></li>
+    </ul>
+</div>
 
-    function openForm() {
-        document.getElementById("loginForm").style.display = "block";
-    }
-</script>
+<hr>
+
+
+<h2 id="galleryHeader">Gallery</h2>
+<p id="galleryText">Here you can see pictures from my appartment. <br>
+    You will have access to all areas in the house. <br>
+    <br>The house is fuly equipped with furniture.<br>
+    <br>You dont have to bring you own towels <br> or bedsheets.</p>
+
+<div class="galleryRow1">
+    <div class="galleryColumn1">
+        <img src="../img/img1.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    </div>
+
+    <div class="galleryColumn1">
+        <img src="../img/img2.png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    </div>
+
+    <div class="galleryColumn1">
+        <img src="../img/img3.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    </div>
+
+    <div class="galleryColumn1">
+        <img src="../img/img4.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    </div>
+
+    <!-- Here the second row starts -->
+
+    <div class="galleryRow2">
+        <div class="galleryColumn2">
+            <img src="../img/img5.png" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+        </div>
+
+        <div class="galleryColumn2">
+            <img src="../img/img6.png" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+        </div>
+
+        <div class="galleryColumn2">
+            <img src="../img/img7.png" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+        </div>
+
+        <div class="galleryColumn2">
+            <img src="../img/img8.png" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+        </div>
+
+    </div>
+
+    <div id="galleryModal" class="galleryModalClass">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="galleryModalContent">
+
+            <div class="gallerySlides">
+                <div class="numbertext">1 / 8</div>
+                <img src="../img/img1.png" style="width:100%">
+            </div>
+
+            <div class="gallerySlides">
+                <div class="numbertext">2 / 8</div>
+                <img src="../img/img2.png" style="width:100%">
+            </div>
+
+            <div class="gallerySlides">
+                <div class="numbertext">3 / 8</div>
+                <img src="../img/img3.png" style="width:100%">
+            </div>
+
+            <div class="gallerySlides">
+                <div class="numbertext">4 / 8</div>
+                <img src="../img/img4.png" style="width:100%">
+            </div>
+
+            <div class="gallerySlides">
+                <div class="numbertext">5 / 8</div>
+                <img src="../img/img5.png" style="width:100%">
+            </div>
+
+            <div class="gallerySlides">
+                <div class="numbertext">6 / 8</div>
+                <img src="../img/img6.png" style="width:100%">
+            </div>
+
+            <div class="gallerySlides">
+                <div class="numbertext">7 / 8</div>
+                <img src="../img/img7.png" style="width:100%">
+            </div>
+
+            <div class="gallerySlides">
+                <div class="numbertext">8 / 8</div>
+                <img src="../img/img8.png" style="width:100%">
+            </div>
+
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- This is the container where the images pop up -->
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <div class="galleryColumn1">
+            <img class="modalSmall cursor" src="../img/img1.png" style="width:100%" onclick="currentSlide(1)" alt="Outside view of the house">
+        </div>
+
+        <div class="galleryColumn1">
+            <img class="modalSmall cursor" src="../img/img2.png" style="width:100%" onclick="currentSlide(2)" alt="Living room">
+        </div>
+
+        <div class="galleryColumn1">
+            <img class="modalSmall cursor" src="../img/img3.png" style="width:100%" onclick="currentSlide(3)" alt="Kitchen">
+        </div>
+
+        <div class="galleryColumn1">
+            <img class="modalSmall cursor" src="../img/img4.png" style="width:100%" onclick="currentSlide(4)" alt="Bedroom">
+        </div>
+        <div class="galleryRow2">
+            <div class="galleryColumn2">
+                <img class="modalSmall cursor" src="../img/img5.png" style="width:100%" onclick="currentSlide(5)" alt="Second bedroom">
+            </div>
+
+            <div class="galleryColumn2">
+                <img class="modalSmall cursor" src="../img/img6.png" style="width:100%" onclick="currentSlide(6)" alt="Bathroom">
+            </div>
+
+            <div class="galleryColumn2">
+                <img class="modalSmall cursor" src="../img/img7.png" style="width:100%" onclick="currentSlide(7)" alt="Garden">
+            </div>
+
+            <div class="galleryColumn2">
+                <img class="modalSmall cursor" src="../img/img8.png" style="width:100%" onclick="currentSlide(8)" alt="Garden">
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 <div class="footer">
     <footer>
         <p>Posted by: Gruppe31</p>
-        <p>Contact information: <a href="mailto:Gruppe31@gmail.com">
+        </br>
+        <p>Contact information: <br/> <a href="mailto:Gruppe31@gmail.com">
             Gruppe31@gmail.com</a>
-            - <a href="tel:+4512345678">+45 12 34 56 78</a>
-            <br/>
+            <a href="tel:+4512345678">+45 12 34 56 78</a>
+            <br/><br/>
             <a href="#top">Back to the top</a>
         </p>
-
     </footer>
+</div>
+
 </body>
+<script src="../Javascript/gallery.js"></script>
+<script src="../Javascript/login_navbar.js"></script>
+<script src="../Javascript/hamburger_menu.js"></script>
 </html>

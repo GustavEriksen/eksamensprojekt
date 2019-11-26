@@ -39,5 +39,3 @@ class booking {
         // Here the data is shown in console log.
     alert("Your reservation has been sent to Vivian. You will be notified when the reservation request has been accepted/denied.");
     }
-
-    //retrieve

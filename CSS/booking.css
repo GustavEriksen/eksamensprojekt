@@ -1,9 +1,9 @@
 /* Style for reservation.html */
 
-/*Styler body*/
+/*Style for body */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: url("../img/ex.jpg") no-repeat center center fixed;
+  background: url("../img/kitchen.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -11,12 +11,16 @@ body {
     color: white;
 }
 
-#mydiv {
+/* Style for booking-div */
+#booking-div {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 130px;
+    color: black;
+    font-size: 12px;
 }
 
-/* Styler input bokse */
+
+/* Style for input boxes */
 input[type=text], input[type=date], input[type=number], textarea, input[type=tel] {
     width: 100%;
     padding: 15px;
@@ -26,15 +30,15 @@ input[type=text], input[type=date], input[type=number], textarea, input[type=tel
     background: white;
 }
 
-/* Styler alle input bokse, når de er valgt som det felt der skal indtastes i. */
+/* Stle for all input boxes when the input field is chosen. */
 input[type=text]:focus, input[type=date]:focus, input[type=number]:focus, textarea:focus, input[input=tel]:focus {
   background-color: #ddd;
   outline: none;
 }
 
-/* Style for Requst booking knappen */
+/* Style for Request booking button */
 .request-booking {
-    background-color: #4CAF50;
+    background-color: #76D2BB;
     color: white;
     padding: 16px 20px;
     margin: 8px 0;
@@ -45,20 +49,28 @@ input[type=text]:focus, input[type=date]:focus, input[type=number]:focus, textar
     margin-bottom: 100px;
 }
 
-/* Sætter hover på Request Booking knappen */
+/* Hover for Request Booking button */
 .request-booking:hover {
     opacity: 10;
 }
 
-#knap {
+#knap { /* New Name */
     margin-left: 50%;
     margin-top: 100px;
 }
 
+/* Stle reservation form */
 .reservation-form {
     border-radius: 5px;
     width: 40%;
     text-align: center;
     margin: 0 auto;
+    margin-top: 50px;
+}
 
+/* footer style */
+.footer {
+    background-color: rgb(255,255,255,0.6);
+    padding: 20px !important;
+    margin-bottom: 20px !important;
 }

@@ -1,6 +1,9 @@
 body {
-    background-color: #f1f1f1;
-    font-family: "Palatino", sans-serif;
+    background-color: white;
+    font-family: "Palatino", "Palatino Linotype", sans-serif;
+    /* vi bruger både Palatino og Palatino Linotype da de
+    hver især er kompatible med forskellige browsere
+     */
 }
 
 p, li, a, * {
@@ -18,73 +21,131 @@ p, li, a, * {
     top: 8px;
 }
 
-/* Below is the styling for our navigation bar */
-.navBar {
+/* Design of the responsive hamburger menu */
+
+/* Design of icon */
+.navBar .icon {
+    display: none;
+    color: black;
+    font-size: 24px;
+    position: absolute;
+    top: 26px;
+    left: 230px;
+    cursor: pointer;
+}
+
+/* Making icon appear and navBar hide at certain width */
+@media screen and (max-width: 800px) {
+    .navBar .navListBullets {display: none;}
+    .navBar a.icon {
+        float: left;
+        display: block;
+    }
+}
+
+/* Making hamburgerBar appear onClick */
+@media screen and (max-width: 2000px) {
+    .hamburgerBar .HLB {display: none;}
+    .hamburgerBar.responsive {position: relative;}
+    .hamburgerBar.responsive .icon {
+        position: absolute;
+    }
+    .hamburgerBar.responsive a {
+        display: block;
+    }
+}
+
+.hamburgerList {
+    background-color: #76D2BB;
     list-style: none;
-    border-width: 1px 0;
+    position: fixed;
+    z-index: 1;
+    top: -17px;
+    left: -8%;
+    width: 108%;
+    box-shadow: 0px 10px 8px rgb(0,0,0,0.5);
+}
+
+.hamburgerListBullets .HLB {
+    text-decoration: none;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.hamburgerListBullets .HLB:hover {
+    font-weight: bold;
+}
+
+/* Below is the styling for the navigation bar */
+.navList {
+    list-style: none;
     margin: 0 auto;
     padding: 0;
-    width: 80%;
-    float: left;
     font-size: 20px;
+    position: absolute;
+    top: 15px;
 }
 
-#navBarBackground {
-    border-style: solid;
-    height: 55px;
-    width: auto;
-    background-color: black;
-}
-
-
-li {
+.navListBullets {
     float: left; /* removes line breaks, and text floats left */
 }
 
-li a {
+.navListBullets .NLB {
     display: inline-block;
     padding: 14px 16px;
     margin: auto;
     text-decoration: none;
     text-align: center;
-    color: white;
-    background-color: black;
+    color: black;
 }
 
-li a:hover {
-    background-color: rgb(291,291,291,0.2);
+.navListBullets .NLB:hover {
+    background-color: rgb(118,210,187,0.2);
+}
+
+#navBarTitle {
+    color: black;
+    font-size: 22px;
+    font-weight: 900;
+    display: inline-block;
+    padding: 14px 16px;
+    margin: auto;
 }
 
 /* Below is the styling for the popup login button */
 * {box-sizing: border-box;}
 
 /* The design of the login button in the navigation bar: */
-.open-button {
-    border: 1px solid black;
+.login-button {
     font-size: 20px;
-    background-color: black;
     color: white;
-    width: 20%;
-    padding: 14px;
+    padding: 15px;
     cursor: pointer;
-    float: right;
-    right: 15px;
+    position: absolute;
+    font-family: "Palatino";
+    right: 20px;
+    top: 12px;
+    border-style: none;
+    background-color: rgb(118,210,187,0.8);
 }
 
-.open-button:hover {
-    background-color: rgb(291,291,291,0.2);
+.login-button:hover {
+    background-color: rgb(118,210,187);
+
 }
 
 /* The position of the popup box: */
-.form-popup {
+.login-popup {
     display: none;
     z-index: 9;
-    right: 8px;
-    position: fixed;
+    right: 9px;
+    position: absolute;
+    top: 12px;
 }
 
 /* The design of the popup box: */
-.form-container {
+.login-container {
     max-width: 300px;
     padding: 10px;
     background-color: white;
@@ -92,7 +153,7 @@ li a:hover {
 }
 
 /* The design of the input forms in the popup: */
-.form-container input[type=text], .form-container input[type=password] {
+.login-container input[type=text], .login-container input[type=password] {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -101,16 +162,17 @@ li a:hover {
 }
 
 /* The design of the cancel button (Login) on the top right: */
-.form-container .cancel {
+.login-container .cancel {
     border: none;
     float: right;
+    font-family: "Palatino";
     font-size: 20px;
-    margin-top: 2px;
+    margin-top: 5px;
     cursor: pointer;
 }
 
 /* The design of the login button in the bottom of the popup: */
-.form-container .btn {
+.login-container .btn {
     background-color:rgb(118,210,187,0.5);
     padding: 16px 20px;
     border: none;
@@ -120,13 +182,13 @@ li a:hover {
     font-size: 14px;
 }
 
-.form-container .btn:hover {
+.login-container .btn:hover {
     background-color: rgb(118,210,187);
     color: white;
 }
 
 /* The design of the register button: */
-.form-container .register {
+.login-container .register {
     background-color: rgb(201,201,201,0.5);
     color: white;
     padding: 16px 20px;
@@ -142,6 +204,7 @@ li a:hover {
     background-color: rgb(201,201,201);
     color: white;
 }
+
 
 
 .title {
@@ -161,8 +224,7 @@ li a:hover {
 
 /* Footer style */
 .footer {
-    color: white;
-    background-color: black;
+    color: black;
     bottom: -10%;
     padding: 50px;
     text-align: center;
@@ -174,8 +236,12 @@ li a:hover {
 .footer a {
     margin-top: 0;
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: small;
+}
+
+.footer a:hover {
+    font-weight: bolder;
 }
 
 .footer p {

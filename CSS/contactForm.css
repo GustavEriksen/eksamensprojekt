@@ -27,16 +27,19 @@ input[type=text], input[type=number], textarea, input[type=email] {
 
 /* Button used to open the contact form */
 .open-ContactButton {
-    background-color: #000000;
+    background-color: rgb(118,210,187,0.8);
     color: white;
-    padding: 15px 15px;
-    border: none;
+    padding: 15px;
+    width: 30%;
     cursor: pointer;
-    position: fixed;
-    bottom: 15px;
-    left: 120px;
-    width: 200px;
+    position: absolute;
+    left: 10px;
     font-size: medium;
+    border-style: none;
+}
+
+.open-ContactButton:hover {
+    background-color: rgb(118,210,187);
 }
 
 /* The popup form - hidden by default */

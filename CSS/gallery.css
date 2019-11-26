@@ -1,0 +1,158 @@
+#galleryHeader {
+    margin-top: 20px;
+    margin-left: 50%;
+    color: white;  /* skal vi virkelig have denne overskrift med? */
+}
+
+#galleryText {
+    margin-top: 10px;
+    text-align: center;
+}
+
+hr {
+    margin-top: 120px;
+    border-color: #76D2BB;
+    width: 80%;
+}
+
+.galleryRow1 > .galleryColumn1 {
+    padding: 0 2px;
+
+}
+
+.galleryRow1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.galleryColumn1 {
+    margin-top: 10px;
+    padding: 2px;
+    float: left;
+    width: 25%;
+
+}
+
+.galleryRow2 {
+    float: left;
+    left: 10%;
+}
+
+.galleryRow2 > .galleryColumn2 {
+    padding: 0 2px;
+}
+
+.galleryRow2:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.galleryColumn2 {
+    float: left;
+    width: 25%;
+    margin-bottom: 30px;
+}
+
+/* The Modal (background) */
+.galleryModalClass {
+    display: none;
+    position: fixed;
+    padding-top: 35px;
+    left: 0%;
+    top: 0px;
+    height: 100%;
+    max-height: 812px;
+    overflow: scroll;
+    background-color: black;
+}
+
+/* Modal Content */
+.galleryModalContent {
+    position: center;
+    margin: auto;
+    width: 90%;
+    max-width: 700px;
+    max-height: 712px;
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    position: absolute;
+    top: 2px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.gallerySlides {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 15%;
+    width: auto;
+    padding: 175px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+}
+
+
+/* Number text (1/8) */
+.numbertext {
+    color: white;
+    font-size: 18px;
+    padding: 8px;
+    position: absolute;
+    top: 0;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px;
+    color: white;
+    font-size: 20px;
+}
+
+.modalSmall {
+    opacity: 0.65;
+    margin-top: 0px;
+}
+
+.active,
+.modalSmall:hover {
+    opacity: 1;
+}
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
