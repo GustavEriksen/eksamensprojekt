@@ -1,3 +1,15 @@
+// Check login
+if (JSON.parse(localStorage.getItem("currentUser")) == null){
+    alert("You need to be logged in to make a booking request");
+    document.location.href = "home.html";
+    var x = document.getElementById("mydiv");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
 // Here we create a class for the data, that we need to retrieve from request booking.
 class booking {
     constructor(fullname, email, telephone, check_in, check_out, adults, children, comments) {
