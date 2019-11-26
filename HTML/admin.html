@@ -1,38 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Admin</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>
+        Html CRUD with Pure JavaScript
+    </title>
+    <link rel="stylesheet" type="text/css" href="../CSS/booking.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/home.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/general.css">
+    <script src="../Javascript/booking.js"></script>
 
 </head>
-<body onload="showBooking()">
 
+<body>
+            <table class="list" id="bookingList">
+                <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Telephone</th>
+                    <th>Check In</th>
+                    <th>Check Out</th>
+                    <th>Adults</th>
+                    <th>Children</th>
+                    <th>Comments</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
 
-<h1>All Bookings</h1>
-<div id="bookings"></div>
-
-<table border="1">
-    <thead>
-    <tr>
-        <th id="fullname"> Fullname</th>
-        <th id="email"> Email</th>
-        <th id="telephone"> Telephone</th>
-        <th id="check_in"> Check In Date</th>
-        <th id="check_out"> Check Out Date</th>
-        <th id="adults">Adults</th>
-        <th id="children"> Children</th>
-        <th id="comments"> Comments</th>
+                </tbody>
+            </table>
+        </td>
     </tr>
-    </thead>
-    <tbody id="body">
-    </tbody>
 </table>
+            <div id="storage"></div>
 
-
+            <script src="../Javascript/admin.js"></script>
 </body>
-
-<script src="../Javascript/booking.js"></script>
-<script src="../Javascript/admin.js"></script>
 
 </html>
