@@ -1,14 +1,5 @@
-// Bruger
-
-/*
-Dette script er tilknyttet nye brugere af systemet, som skal
-kunne foretage/søge om en booking til systemet.
-
-Methods:
-- Reservér/book/booking
-- Se "Mine Reservationer"
-*/
-
+// This is our User class. It contains the information required for making an account which will grant access to
+// making future bookings.
 class User {
     constructor(fullname, email, telephone, birthday, userName, password) {
         this.fullname = fullname;

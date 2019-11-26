@@ -66,7 +66,57 @@ var psw = document.getElementById("psw");
 var userName = document.getElementById("userName");
 var teleNmb= document.getElementById("teleNmb");
 
-// We now create a series of scripts which will check to see if the user registers correctly.
+// We now create a series of "if" statements, which will check to see if the user registers correctly. All of them will be contained in a function.
+function UserCreationControl() {
+    var messageAlert = "";
+    var booleanAlert = true;
+
+    // "if" statement to control if user has entered a name
+    if (fullname.value===""){
+       messageAlert += "Please enter your name ";
+       booleanAlert = false;
+       console.log(messageAlert, booleanAlert)
+    }
+
+    if (birthday.value===""){
+        messageAlert += "Please enter your date of birth ";
+        booleanAlert = false;
+    }
+
+    var dateGiven = birthday;
+    var dateToday = new Date();
+    dateGiven = new Date(dateGiven);
+    if (dateGiven > dateToday){
+        messageAlert += "Please enter a correct date of birth ";
+        booleanAlert = false;
+    }
+
+    if (email.value===""){
+        messageAlert += "Please enter you contact email ";
+        booleanAlert = false;
+    }
+
+    if (psw.value===""){
+        messageAlert += "Please enter a correct password ";
+        booleanAlert = false;
+    }
+
+    if (userName===""){
+        messageAlert += "Please enter a Username ";
+        booleanAlert = false;
+    }
+
+    if (teleNmb===""){
+        messageAlert += "Please enter a contact number ";
+        booleanAlert = false;
+    }
+
+    if (booleanAlert === false){
+        alert(messageAlert);
+    } else {
+        createUser();
+    }
+}
 
 
 // We create an if statement to check if there are any users stored in localStorage.
