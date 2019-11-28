@@ -9,14 +9,28 @@ function closeLoginForm() {
 }
 
 // Script for closing the login popup outside of box
-var loginCloser = document.getElementById("popupForLogin");
-var loginWrapper = document.getElementById("loginWrapper");
+// var loginCloser = document.getElementById("popupForLogin");
+// var loginWrapper = document.getElementById("loginWrapper");
+
+//loginWrapper.style.height = '100vh';
+//loginWrapper.style.width = '120%';
+
+// Open menu
+//document.querySelector('.login-button').addEventListener('click', () => {
+    //loginCloser.classList.add('responsive');
+    //loginWrapper.style.display = 'block';
+    //loginWrapper.style.position = 'absolute';
+    //loginWrapper.style.top = '0';
+    //loginWrapper.style.zIndex = '102';
+    //loginWrapper.style.backgroundColor = 'rgba(0,0,0, .5)';
+    //loginWrapper.style.marginLeft = '-1%';
+//});
 
 // Close menu
-document.querySelector('#loginWrapper').addEventListener('click', () => {
-    loginCloser.classList.remove('responsive')
-    loginWrapper.style.display = 'none'
-});
+//document.querySelector('#loginWrapper').addEventListener('click', () => {
+   //loginCloser.classList.remove('responsive')
+   //loginWrapper.style.display = 'none'
+//});
 
 // Script for the hamburger bar
 var hamburger = document.getElementById("hamburgerPopUp");
