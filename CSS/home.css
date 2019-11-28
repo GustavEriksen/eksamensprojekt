@@ -221,6 +221,11 @@ p, li, a, * {
 #homeText {
     margin-bottom: 50px;
     padding-bottom: 50px;
+    padding-top: 50px;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+
 }
 
 img {
