@@ -1,6 +1,7 @@
 body {
     background-color: white;
     font-family: "Palatino", "Palatino Linotype", sans-serif;
+    overflow-x: hidden; /* fjerner scroll bar på x-aksen */
 }
 
 p, li, a, * {

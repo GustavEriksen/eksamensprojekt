@@ -4,6 +4,7 @@ body {
     /* vi bruger både Palatino og Palatino Linotype da de
     hver især er kompatible med forskellige browsere
      */
+    overflow-x: hidden; /* fjerner scroll bar på x-aksen */
 }
 
 p, li, a, * {
