@@ -34,27 +34,27 @@ function closeLoginForm() {
 
 // Script for the hamburger bar
 var hamburger = document.getElementById("hamburgerPopUp");
-var navWrapper = document.getElementById("hamBarWrapper");
+var hamWrapper = document.getElementById("hamBarWrapper");
 
-navWrapper.style.display = 'none';
-navWrapper.style.height = '100vh';
-navWrapper.style.width = '120%';
+hamWrapper.style.display = 'none';
+hamWrapper.style.height = '100vh';
+hamWrapper.style.width = '120%';
 
 // Open menu
 document.querySelector('.icon').addEventListener('click', () => {
     hamburger.classList.add('responsive');
-    navWrapper.style.display = 'block';
-    navWrapper.style.position = 'absolute';
-    navWrapper.style.top = '0';
-    navWrapper.style.zIndex = '102';
-    navWrapper.style.backgroundColor = 'rgba(0,0,0, .5)';
-    navWrapper.style.marginLeft = '-1%';
+    hamWrapper.style.display = 'block';
+    hamWrapper.style.position = 'absolute';
+    hamWrapper.style.top = '0';
+    hamWrapper.style.zIndex = '102';
+    hamWrapper.style.backgroundColor = 'rgba(0,0,0, .5)';
+    hamWrapper.style.marginLeft = '-1%';
 });
 
 // Close menu
 document.querySelector('#hamBarWrapper').addEventListener('click', () => {
     hamburger.classList.remove('responsive');
-    navWrapper.style.display = 'none';
+    hamWrapper.style.display = 'none';
 });
 
 
