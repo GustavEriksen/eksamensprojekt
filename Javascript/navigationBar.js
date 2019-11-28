@@ -1,21 +1,21 @@
-// This function uses the HTML tag 'onclick' to open the login popup in the nav bar
+// NF: This function uses the HTML tag 'onclick' to open the login popup in the nav bar
 function openLoginForm() {
     document.getElementById("loginForm").style.display = "block";
 }
 
-// This function uses the HTML tag 'onclick' to close the login popup in the nav bar
+// NF: This function uses the HTML tag 'onclick' to close the login popup in the nav bar
 function closeLoginForm() {
     document.getElementById("loginForm").style.display = "none";
 }
 
-// Script for closing the login popup outside of box
+// NF: Script for closing the login popup outside of box
 // var loginCloser = document.getElementById("popupForLogin");
 // var loginWrapper = document.getElementById("loginWrapper");
 
 //loginWrapper.style.height = '100vh';
 //loginWrapper.style.width = '120%';
 
-// Open menu
+// NF: Open login
 //document.querySelector('.login-button').addEventListener('click', () => {
     //loginCloser.classList.add('responsive');
     //loginWrapper.style.display = 'block';
@@ -26,13 +26,13 @@ function closeLoginForm() {
     //loginWrapper.style.marginLeft = '-1%';
 //});
 
-// Close menu
+// NF: Close login
 //document.querySelector('#loginWrapper').addEventListener('click', () => {
    //loginCloser.classList.remove('responsive')
    //loginWrapper.style.display = 'none'
 //});
 
-// Script for the hamburger bar
+// NF: Script for the hamburger bar
 var hamburger = document.getElementById("hamburgerPopUp");
 var hamWrapper = document.getElementById("hamBarWrapper");
 
@@ -40,7 +40,7 @@ hamWrapper.style.display = 'none';
 hamWrapper.style.height = '100vh';
 hamWrapper.style.width = '120%';
 
-// Open menu
+// NF: Open hamburger menu
 document.querySelector('.icon').addEventListener('click', () => {
     hamburger.classList.add('responsive');
     hamWrapper.style.display = 'block';
@@ -51,7 +51,7 @@ document.querySelector('.icon').addEventListener('click', () => {
     hamWrapper.style.marginLeft = '-1%';
 });
 
-// Close menu
+// NF: Close hamburger menu
 document.querySelector('#hamBarWrapper').addEventListener('click', () => {
     hamburger.classList.remove('responsive');
     hamWrapper.style.display = 'none';
