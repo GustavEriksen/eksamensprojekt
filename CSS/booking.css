@@ -37,7 +37,7 @@ input[type=text]:focus, input[type=date]:focus, input[type=number]:focus, textar
 }
 
 /* Style for Request booking button */
-.request-booking {
+#save_book {
     background-color: #76D2BB;
     color: white;
     padding: 16px 20px;
@@ -50,14 +50,10 @@ input[type=text]:focus, input[type=date]:focus, input[type=number]:focus, textar
 }
 
 /* Hover for Request Booking button */
-.request-booking:hover {
+.save_book:hover {
     opacity: 10;
 }
 
-#knap { /* New Name */
-    margin-left: 50%;
-    margin-top: 100px;
-}
 
 /* Stle reservation form */
 .reservation-form {

@@ -2,41 +2,75 @@
 <html>
 
 <head>
-    <title>
-        Html CRUD with Pure JavaScript
-    </title>
-    <link rel="stylesheet" type="text/css" href="../CSS/booking.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/home.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/general.css">
-    <script src="../Javascript/booking.js"></script>
+    <title>Admin Page - Booking List</title>
 
+    <link data-require="bootstrap@4.1.1" data-semver="4.1.1" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../CSS/bookingAdmin.css" />
 </head>
 
 <body>
-            <table class="list" id="bookingList">
-                <thead>
-                <tr>
-                    <th>Full Name</th>
-                    <th>Email</th>
-                    <th>Telephone</th>
-                    <th>Check In</th>
-                    <th>Check Out</th>
-                    <th>Adults</th>
-                    <th>Children</th>
-                    <th>Comments</th>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
+<h1>Admin page</h1>
+<br>
+<h1>You can manually add a booking</h1>
 
-                </tbody>
-            </table>
-        </td>
-    </tr>
-</table>
-            <div id="storage"></div>
+<div id="add-booking">
+    <form>
+        <div>
+            <label for="book_name"></label>
+            <input type="text" placeholder="Enter Your Full Name" id="book_name" required>
+        </div>
 
-            <script src="../Javascript/bookingAdmin.js"></script>
+        <div>
+            <label for="book_email"></label>
+            <input type="text" placeholder="Enter Your Email" id="book_email" required>
+        </div>
+
+        <div>
+            <label for="book_telephone"></label>
+            <input type="tel" placeholder="Your Telephone Number" id="book_telephone" required>
+        </div>
+
+        <div>
+            <label for="book_checkIn"></label>
+            <input type="date" placeholder="Check in Date" id="book_checkIn" required>
+        </div>
+
+        <div>
+            <label for="book_checkOut"></label>
+            <input type="date" placeholder="Check Out Date" id="book_checkOut" required>
+        </div>
+
+        <div>
+            <label for="book_adults"></label>
+            <input type="number" placeholder="Number of Adults" id="book_adults" required>
+        </div>
+
+        <div>
+            <label for="book_children"></label>
+            <input type="number" placeholder="Number of Children" id="book_children" required>
+        </div>
+
+        <div>
+            <label for="book_comments"></label>
+            <input type="text" placeholder="Add any comment" id="book_comments" required>
+        </div>
+
+        <div>
+            <button id="save_book" type="button"> Save Task</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+<hr />
+<div id="booking-list">
+    <h2>Booking List</h2>
+    <ul id="book_wrapper"></ul>
+</div>
+<script src="../Javascript/booking.js"></script>
 </body>
 
 </html>

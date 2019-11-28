@@ -1,105 +1,184 @@
-// Here we take the input data and assign them to their respective id values
-var fullname = document.getElementById("name");
-var email = document.getElementById("email");
-var telephone = document.getElementById("telephone");
-var check_in = document.getElementById("check_in");
-var check_out = document.getElementById("check_out");
-var adults = document.getElementById("adults");
-var children = document.getElementById("children");
-var comments = document.getElementById("comments");
 
-document.getElementById("storage").innerHTML = localStorage.getItem("booking");
+(function() {
 
-var selectedRow = null
+    'use strict';
+    /* Defining variables which we are using throughout the script. */
+    var lastId = 0;                                                                // Creating id's for each booking
+    var bookWrapper = document.getElementById("book_wrapper");          // Wrapping all bookings
+    var btnSave = document.getElementById("save_book");                // Button which saves each booking
+    var removeIcon;                                                             // Admin can remove a booking
+    var updateIcon;                                                            // Adin can update the status of the booking
+    var bookList;                                                             // booking list
 
-function onFormSubmit() {
-    if (validate()) {
-        var formData = readFormData();
-        if (selectedRow == null)
-            insertNewRecord(formData);
-        else
-            updateRecord(formData);
-        resetForm();
+    // book or Book is short for booking or Booking
+
+    //Function which loads the booking list whenever the page is loaded or each time a booking gets manually added by the Admin
+    function init() {
+
+        if (!!(window.localStorage.getItem('bookList'))) {
+            bookList = JSON.parse(window.localStorage.getItem('bookList'));
+        } else {
+            bookList = [];
+        }
+        btnSave.addEventListener('click', saveBook);
+        showList();
     }
-}
 
-function readFormData() {
-    var formData = {};
-    formData["fullname"] = document.getElementById("fullname").value;
-    formData["email"] = document.getElementById("email").value;
-    formData["telephone"] = document.getElementById("telephone").value;
-    formData["check_in"] = document.getElementById("check_in").value;
-    formData["check_out"] = document.getElementById("check_out").value;
-    formData["adults"] = document.getElementById("adults").value;
-    formData["children"] = document.getElementById("children").value;
-    formData["comments"] = document.getElementById("comments").value;
-    return formData;
-}
 
-function insertNewRecord(data) {
-    var table = document.getElementById("storage").innerHTML = localStorage.getItem("booking");
-    var newRow = table.insertRow(table.length);
-    cell1 = newRow.insertCell(0);
-    cell1.innerHTML = data.fullname;
-    cell2 = newRow.insertCell(1);
-    cell2.innerHTML = data.email;
-    cell3 = newRow.insertCell(2);
-    cell3.innerHTML = data.telephone;
-    cell4 = newRow.insertCell(3);
-    cell4.innerHTML = data.check_in;
-    cell5 = newRow.insertCell(4);
-    cell5.innerHTML = data.check_out;
-    cell6 = newRow.insertCell(5);
-    cell6.innerHTML = data.adults;
-    cell7 = newRow.insertCell(6);
-    cell7.innerHTML = data.children;
-    cell8 = newRow.insertCell(7);
-    cell8.innerHTML = data.comments;
-    cell8 = newRow.insertCell(8);
-    cell8.innerHTML = `<a onClick="onEdit(this)">Edit</a>
-                       <a onClick="onDelete(this)">Delete</a>`;
-}
+    //CRUD div of booking (Create, Update, Delete)
 
-function resetForm() {
-    document.getElementById("fullname").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("telephone").value = "";
-    document.getElementById("check_in").value = "";
-    document.getElementById("check_out").value = "";
-    document.getElementById("adults").value = "";
-    document.getElementById("children").value = "";
-    document.getElementById("comments").value = "";
-    selectedRow = null;
-}
+    // Functions which shows the booking list
+    function showList() {
 
-function onEdit(td) {
-    selectedRow = td.parentElement.parentElement;
-    document.getElementById("fullname").value = selectedRow.cells[0].innerHTML;
-    document.getElementById("email").value = selectedRow.cells[1].innerHTML;
-    document.getElementById("telephone").value = selectedRow.cells[2].innerHTML;
-    document.getElementById("check_in").value = selectedRow.cells[3].innerHTML;
-    document.getElementById("check_out").value = selectedRow.cells[4].innerHTML;
-    document.getElementById("adults").value = selectedRow.cells[5].innerHTML;
-    document.getElementById("children").value = selectedRow.cells[6].innerHTML;
-    document.getElementById("comments").value = selectedRow.cells[7].innerHTML;
-}
-function updateRecord(formData) {
-    selectedRow.cells[0].innerHTML = formData.fullname;
-    selectedRow.cells[1].innerHTML = formData.email;
-    selectedRow.cells[2].innerHTML = formData.telephone;
-    selectedRow.cells[3].innerHTML = formData.check_in;
-    selectedRow.cells[4].innerHTML = formData.check_out;
-    selectedRow.cells[5].innerHTML = formData.adults;
-    selectedRow.cells[6].innerHTML = formData.children;
-    selectedRow.cells[7].innerHTML = formData.comments;
-}
+        if (!!bookList.length) {
+            getLastBookId();
+            for (var item in bookList) {
+                var book = bookList[item];
+                addBookToList(book);
+            }
+            syncEvents();
+        }
 
-function onDelete(td) {
-    if (confirm('Are you sure to delete this record ?')) {
-        row = td.parentElement.parentElement;
-        document.getElementById("bookingList").deleteRow(row.rowIndex);
-        resetForm();
     }
-}
 
+    //Function which saves the input from the html form.
+    function saveBook(event) {
+
+        var book = {
+            bookId: lastId,
+            bookName: document.getElementById("book_name").value,
+            bookEmail: document.getElementById("book_email").value,
+            bookTelephone: document.getElementById("book_telephone").value,
+            bookCheckIn: document.getElementById("book_checkIn").value,
+            bookCheckOut: document.getElementById("book_checkOut").value,
+            bookAdults: document.getElementById("book_adults").value,
+            bookChildren: document.getElementById("book_children").value,
+            bookComments: document.getElementById("book_comments").value,
+            bookStatus: ("Pending").value, //All bookings has an undifined booking status --> admin has to change to "accepted" or "denied"
+        }
+        alert("Your reservation has been sent to Vivian. You will be notified when the reservation request has been accepted/denied."); //Makes an alert i browser, so user can see the booking has been sent.
+
+
+        bookList.push(book); //pushes the new booking to the booking list
+        syncBook(); // syncs all the booking
+        addBookToList(book); //adding new booking to list
+        syncEvents(); // Syncing all "events"
+        lastId++; //Creates unique ID for latest booking
+    }
+
+    // Function which adds booking to the Booking List, where Admin can delete and change status of the booking and then shows the list of bookings
+    function addBookToList(book) {
+
+        var removeIcon = document.createElement('span'); //Remove Icon
+        var element = document.createElement('li');
+        var updateIcon = document.createElement('span'); // Update Icon
+
+        removeIcon.innerHTML = "X"; // The letter used for the remove icon
+        removeIcon.className = "remove_item clickeable";
+        removeIcon.setAttribute("title", "Remove");
+
+        updateIcon.innerHTML = "U"; // The letter used for the Update Icon
+        updateIcon.className = "update_icon clickeable";
+        updateIcon.setAttribute("title", "Update");
+
+        // Showing "Remove" & "Update" icon + Name, checkin date, checkout date & booking status (undefined as standard)
+        element.appendChild(removeIcon);
+        element.appendChild(updateIcon);
+        element.setAttribute("id", book.bookId);
+        element.innerHTML += ("<b> Name: </b>" + book.bookName + " ");
+        element.innerHTML += ("<b> Check In : </b>" + book.bookCheckIn + " ");
+        element.innerHTML += ("<b> Check Out: </b>" + book.bookCheckOut + " ");
+        element.innerHTML += ("<b> Status: </b>" + book.bookStatus + " ");
+
+        bookWrapper.appendChild(element);
+
+
+    }
+
+    // Function which updates only the Status
+    function updateBook(event) {
+
+        var bookTag = event.currentTarget.parentNode;
+        var bookId = bookTag.id;
+        var bookToUpdate = findBook(bookId).book;
+        var pos = findBook(bookId).pos;
+        if (!!bookToUpdate) {
+            var status = prompt("Status: ", bookToUpdate.bookStatus);
+            bookToUpdate.bookStatus = status;
+            bookList[status] = bookToUpdate;
+            bookTag.lastChild.textContent = bookToUpdate.bookStatus;
+            syncBook();
+        }
+    }
+
+    // Function which removes a booking when pressing the red "X".
+    function removeBook(event) {
+
+        var bookToRemove = event.currentTarget.parentNode;
+        var bookId = bookToRemove.id;
+        bookWrapper.removeChild(bookToRemove);
+        bookList.forEach(function(value, i) {
+            if (value.bookId == bookId) {
+                bookList.splice(i, 1);
+            }
+        })
+
+        syncBook();
+    }
+
+    // End of CRUD div
+
+
+
+    //function which syncs the bookings and updated bookings to the booking list
+    function syncBook() {
+
+        window.localStorage.setItem('bookList', JSON.stringify(bookList));
+        bookList = JSON.parse(window.localStorage.getItem('bookList'));
+    }
+
+    //Function which shows the lastest booking as the last booking on the Booking List
+    function getLastBookId() {
+        var lastBook = bookList[bookList.length - 1];
+        lastId = lastBook.bookId + 1;
+    }
+
+    // Function which sync "events" - the update and remove icon.
+    function syncEvents() {
+
+        updateIcon = document.getElementsByClassName("update_icon");
+        removeIcon = document.getElementsByClassName("remove_item");
+        if (!!removeIcon.length) {
+            for (var i = 0; i < removeIcon.length; i++) {
+                removeIcon[i].addEventListener('click', removeBook); // When you press X the booking actually gets removed
+            }
+        }
+        if (!!updateIcon.length) {
+            for (var j = 0; j < updateIcon.length; j++) {
+                updateIcon[j].addEventListener('click', updateBook); // When you press U the booking actually gets updated
+            }
+        }
+    }
+
+    function findBook(id) {
+
+        var response = {
+            book: '',
+            pos: 0
+        };
+        bookList.forEach(function(value, i) {
+            if (value.bookId == id) {
+                response.book = value;
+                response.pos = i;
+            }
+        });
+
+        return response;
+    }
+
+    //End Common
+
+
+    init();
+})();
 

@@ -81,40 +81,56 @@
         style="border-width:0" width="500" height="500" frameborder="0" scrolling="no"></iframe>
 
     <!-- Booking form -->
-    <div class="reservation-form">
+    <div id="container" class="reservation-form">
         <form id="booking-form" class="booking-form">
         <h1>Make a reservation</h1>
         <p>Please fill in this form to request a reservation</p>
 
-        <label for="name"></label>
-        <input type="text" placeholder="Enter Your Full Name" name="name" id="name" required>
+            <div>
+                <label for="book_name"></label>
+                <input type="text" placeholder="Enter Your Full Name" id="book_name" required>
+            </div>
 
-        <label for="email"></label>
-        <input type="text" placeholder="Enter Your Email" name="email" id="email" required>
+            <div>
+                <label for="book_email"></label>
+                <input type="text" placeholder="Enter Your Email" id="book_email" required>
+            </div>
 
-        <label for="telephone"></label>
-        <input type="tel" placeholder="Your Telephone Number" name="telephone" id="telephone" required>
+            <div>
+                <label for="book_telephone"></label>
+                <input type="tel" placeholder="Your Telephone Number" id="book_telephone" required>
+            </div>
 
-        <label for="check-in"></label>
-        <input type="date" placeholder="Check In Date" name="check-in" id="check-in" required>
+            <div>
+                <label for="book_checkIn"></label>
+                <input type="date" placeholder="Check in Date" id="book_checkIn" required>
+            </div>
 
-        <label for="check-out"></label>
-        <input type="date" placeholder="Check Out Date" name="check-out" id="check-out" required>
+            <div>
+                <label for="book_checkOut"></label>
+                <input type="date" placeholder="Check Out Date" id="book_checkOut" required>
+            </div>
 
-        <label for="adults"></label>
-        <input type="number" placeholder="Number of Adults"  name="adults" id="adults" required>
+            <div>
+                <label for="book_adults"></label>
+                <input type="number" placeholder="Number of Adults" id="book_adults" required>
+            </div>
 
-        <label for="children"></label>
-        <input type="number" placeholder="Number of Children (0-16 years old)" name="children" id="children" required>
+            <div>
+                <label for="book_children"></label>
+                <input type="number" placeholder="Number of Children" id="book_children" required>
+            </div>
 
-        <label for="comments"></label>
-        <textarea for="comments" name="comments" placeholder="Add Any Comments" style="height:200px" id="comments"></textarea>
+            <div>
+                <label for="book_comments"></label>
+                <input type="text" placeholder="Add any comment" id="book_comments">
+            </div>
 
+            <div>
+                <button id="save_book" type="submit">Request Booking</button>
 
-        <!--Submit button-->
-        <button type="submit" onclick="createBooking()" class="request-booking">Request Booking</button>
-
-</form>
+            </div>
+        </form>
 </div>
 
     <!-- Footer div -->
