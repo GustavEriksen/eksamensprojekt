@@ -24,41 +24,42 @@
                 <li class="navListBullets"><a class="NLB" href="gallery.html">Gallery</a></li>
                 <li class="navListBullets"><a class="NLB" href="contact.html">Contact</a></li>
             </ul>
-            <a href="javascript:void(0)" class="icon" onclick="openHamburger()">
+            <a href="javascript:void(0)" class="icon">
                 <i class="fas fa-bars"></i> <!-- Name of the icon from online database -->
             </a>
         </div>
 
 
         <!-- Below is the button and popup for the login form-->
-        <button class="login-button" onclick="openLoginForm() ">Login / Sign Up</button>
+        <div id="loginWrapper">
+            <button class="login-button" onclick="openLoginForm() ">Login / Sign Up</button>
+            <div id="popupForLogin">
+                <div class="login-popup" id="loginForm">
+                <form action="/action_page.php" class="login-container">
+                    <!-- action_page.php should be changed to the action it will include -->
 
-        <div id="popupForLogin">
-        <div class="login-popup" id="loginForm">
-            <form action="/action_page.php" class="login-container">
-                <!-- action_page.php should be changed to the action it will include -->
+                    <button type="button" class="cancel" onclick="closeLoginForm() ">Login / Sign Up</button>
+                    <!-- Button for closing login form again -->
 
-                <button type="button" class="cancel" onclick="closeLoginForm() ">Login / Sign Up</button>
-                <!-- Button for closing login form again -->
+                    <br/><br/>
 
-                <br/><br/>
+                    <label for="usernameInput"><b>Username</b> </label>
+                    <input type="text" placeholder="Enter Username" id="usernameInput">
 
-                <label for="usernameInput"><b>Username</b> </label>
-                <input type="text" placeholder="Enter Username" id="usernameInput">
+                    <label for="passwordInput"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" id="passwordInput">
 
-                <label for="passwordInput"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" id="passwordInput">
+                    <button type="submit" class="btn" id="login">Login</button>
 
-                <button type="submit" class="btn" id="login">Login</button>
+                    <button type="button" class="register"> <a href="registration.html">Register</a></button>
 
-                <button type="button" class="register"> <a href="registration.html">Register</a></button>
-
-            </form>
-        </div>
+                </form>
+            </div>
+            </div>
         </div>
 
         <!-- Below is the popup for the hamburger-menu in nav bar -->
-        <div id="navBarWrapper">
+        <div id="hamBarWrapper">
             <div class="hamburgerBar" id="hamburgerPopUp">
                 <ul class="hamburgerList" id="hamburger">
                     <li class="hamburgerListBullets"><a class="HLB" href="home.html">Home</a></li>

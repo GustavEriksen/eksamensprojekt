@@ -8,41 +8,39 @@ function closeLoginForm() {
     document.getElementById("loginForm").style.display = "none";
 }
 
-            // This function will make the login popup close when clicking outside of the form
-            // Firstly, we define a variable to retrieve the div of the login form
-            var closeOutside = document.getElementById('id01')
+// Script for closing the login popup outside of box
+var loginCloser = document.getElementById("popupForLogin");
+var loginWrapper = document.getElementById("loginWrapper");
 
-            // Then we use 'event' with the target property to get the variable above and make it disappear
-            window.onclick = function(event) {
-                if (event.target == closeOutside) {
-                    closeOutside.style.display = "none";
-                }
-            }
-            // The function above is currently not working
+// Close menu
+document.querySelector('#loginWrapper').addEventListener('click', () => {
+    loginCloser.classList.remove('responsive')
+    loginWrapper.style.display = 'none'
+});
 
-<!-- Script for the hamburger bar -->
 // Script for the hamburger bar
 var hamburger = document.getElementById("hamburgerPopUp");
-var navWrapper = document.getElementById("navBarWrapper");
+var navWrapper = document.getElementById("hamBarWrapper");
 
-navWrapper.style.display = 'none'
-navWrapper.style.height = '100vh'
-navWrapper.style.width = '120%'
+navWrapper.style.display = 'none';
+navWrapper.style.height = '100vh';
+navWrapper.style.width = '120%';
 
-
-// open menu
+// Open menu
 document.querySelector('.icon').addEventListener('click', () => {
-    hamburger.classList.add('responsive')
-    navWrapper.style.display = 'block'
-    navWrapper.style.position = 'absolute'
-    navWrapper.style.top = '0'
-    navWrapper.style.zIndex = '102'
-    navWrapper.style.backgroundColor = 'rgba(0,0,0, .5)'
-    navWrapper.style.marginLeft = '-1%'
-})
+    hamburger.classList.add('responsive');
+    navWrapper.style.display = 'block';
+    navWrapper.style.position = 'absolute';
+    navWrapper.style.top = '0';
+    navWrapper.style.zIndex = '102';
+    navWrapper.style.backgroundColor = 'rgba(0,0,0, .5)';
+    navWrapper.style.marginLeft = '-1%';
+});
 
-// close menu
-document.querySelector('#navBarWrapper').addEventListener('click', () => {
-    hamburger.classList.remove('responsive')
-    navWrapper.style.display = 'none'
-})
+// Close menu
+document.querySelector('#hamBarWrapper').addEventListener('click', () => {
+    hamburger.classList.remove('responsive');
+    navWrapper.style.display = 'none';
+});
+
+
