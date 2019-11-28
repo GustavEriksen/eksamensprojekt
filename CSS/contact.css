@@ -208,9 +208,9 @@ hr {
     width: 60%;
     height: 510px;
     float: right;
-    overflow: hidden;
-    border-style: ;
 }
+
+
 
 #billede {
     margin: auto;
@@ -222,28 +222,20 @@ hr {
 }
 
 #contactText {
-    margin-top: 0%;
+    margin-top: 50px;
     margin-left: 1%;
-    padding-left: 1%;
-    padding-right: 1%;
+    text-align: center;
     width: 30%;
-    height: 180px;
     overflow: hidden;
-    border-style: ;
 }
 
-#mailAndPhone {
-
-}
-
-.contactInfo {
-
-}
 
 #locationText {
     margin-left: 10px;
+    margin-top: 50px;
     margin-bottom: 30px;
     width: 30%;
+    text-align: center;
 }
 
 
@@ -251,12 +243,8 @@ hr {
 
 p1{
     font-size: 15px;
-    color: black;
 }
 
-h3{
-    color: black;
-}
 
 /* Kode til maps funktionen */
 .googleMaps{
