@@ -7,11 +7,11 @@ console.log(login) // check to see if login works and what it pulls
 var existingUser = JSON.parse(localStorage.getItem('User'));
 
 // Creating a variable "currentLogin" which we push the login info to as a string later in the script.
-var currentLogIn = []
+var currentLogIn = [];
 //When clicking the Login button, retrieve input of username and password input-boxes
 login.onclick = function  (e) {
-    e.preventDefault() // Making it so that page doesnt refresh when pressing login
-console.log("Hi") // check to see if script works to this point
+    e.preventDefault();// Making it so that page doesnt refresh when pressing login
+console.log("Hi") ;// check to see if script works to this point
     var usernameInput = document.getElementById("usernameInput").value;
     var passwordInput = document.getElementById("passwordInput").value;
 
@@ -31,9 +31,5 @@ console.log("Hi") // check to see if script works to this point
             localStorage.setItem('currentUser', IDString); // Sets the current user
             return true
         }
-
-
-
-
     }
-}
+};

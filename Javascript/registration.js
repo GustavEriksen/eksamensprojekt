@@ -1,22 +1,22 @@
-// In this script we want to create a security measure to make sure, that the user can see if their password meets the requirements set by the input-field
-
+// In this script we want to create a security measure to make sure, that the user can see if their password meets the
+// requirements set by the input-field. First, relevant variables are created.
 var password = document.getElementById("psw");
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var length = document.getElementById("length");
 
 // Script to show a message box when password field is clicked
-password.onfocus = function () {
+password.onfocus = function showPswCheck () {
     document.getElementById("message").style.display = "block";
 };
 
 // Script to hide the message box when the user clicks outside of the password field
-password.onblur = function () {
+password.onblur = function hidePswCheck () {
     document.getElementById("message").style.display = "none";
 };
 
 // Script that starts when the user starts to write in the password field
-password.onkeyup = function () {
+password.onkeyup = function pswCheck () {
     // Check to see if there are lowercase letters
     var lowerCaseLetters = /[a-z]/;
     if(password.value.match(lowerCaseLetters)){
@@ -58,7 +58,7 @@ password.onkeyup = function () {
     }
 };
 
-// Here we take the input data and assign them to their respective id values.
+// Here we create the variables and assign them to their respective id values.
 var fullname = document.getElementById("fullname");
 var birthday= document.getElementById("birthday");
 var email = document.getElementById("email");
@@ -85,6 +85,7 @@ function UserCreationControl() {
         booleanCheck = false;
     }
 
+    // "if" statement to control that the given date of birth is less than today's date
     var dateGiven = birthday;
     var dateToday = new Date();
     dateGiven = new Date(dateGiven);
@@ -155,6 +156,7 @@ function createUser () {
     localStorage.setItem("psw", psw.value);
     localStorage.setItem("userName", userName.value);
     localStorage.setItem("teleNmb", teleNmb.value);*/
+
     alert("New user created. You will now be redirected to the homepage for login");
     document.location.href = "../HTML/home.html";
     console.log(localStorage);
