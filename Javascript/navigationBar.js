@@ -47,7 +47,7 @@ document.querySelector('.icon').addEventListener('click', () => {
     hamWrapper.style.position = 'absolute';
     hamWrapper.style.top = '0';
     hamWrapper.style.zIndex = '102';
-    hamWrapper.style.backgroundColor = 'rgba(0,0,0, .5)';
+    hamWrapper.style.backgroundColor = 'rgba(0,0,0,.5)';
     hamWrapper.style.marginLeft = '-1%';
 });
 
