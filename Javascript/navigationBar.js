@@ -36,9 +36,6 @@ function closeLoginForm() {
 var hamburger = document.getElementById("hamburgerPopUp");
 var hamWrapper = document.getElementById("hamBarWrapper");
 
-hamWrapper.style.display = 'none';
-hamWrapper.style.height = '100vh';
-hamWrapper.style.width = '120%';
 
 // NF: Open hamburger menu
 document.querySelector('.icon').addEventListener('click', () => {

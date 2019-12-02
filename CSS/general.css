@@ -77,6 +77,12 @@ p, li, a, * {
     font-weight: bold;
 }
 
+#hamBarWrapper {
+    display: none;
+    height: 100vh;
+    width: 120%;
+}
+
 /* Below is the styling for the navigation bar */
 .navList {
     list-style: none;
