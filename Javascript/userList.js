@@ -1,4 +1,4 @@
-// This JS is for the user database. It checks to see if any user already exists in localStorage.
+// SAR: This JS is for the user database. It checks to see if any user already exists in localStorage.
 // If not, then it creates and pushes an admin user.
 if(localStorage.getItem('User') == null) {
     var userList = [];

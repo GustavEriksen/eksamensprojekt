@@ -1,23 +1,23 @@
-// In this script we want to create a security measure to make sure, that the user can see if their password meets the
-// requirements set by the input-field. First, relevant variables are created.
+// SAR: In this script we want to create a security measure to make sure, that the user can see if their password meets
+// the requirements set by the input-field. First, relevant variables are created.
 var password = document.getElementById("psw");
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var length = document.getElementById("length");
 
-// Script to show a message box when password field is clicked
+// SAR: Script to show a message box when password field is clicked
 password.onfocus = function showPswCheck () {
     document.getElementById("message").style.display = "block";
 };
 
-// Script to hide the message box when the user clicks outside of the password field
+// SAR: Script to hide the message box when the user clicks outside of the password field
 password.onblur = function hidePswCheck () {
     document.getElementById("message").style.display = "none";
 };
 
-// Script that starts when the user starts to write in the password field
+// SAR: Script that starts when the user starts to write in the password field
 password.onkeyup = function pswCheck () {
-    // Check to see if there are lowercase letters
+    // SAR: Check to see if there are lowercase letters
     var lowerCaseLetters = /[a-z]/;
     if(password.value.match(lowerCaseLetters)){
         letter.classList.remove("invalid");
@@ -27,7 +27,7 @@ password.onkeyup = function pswCheck () {
         letter.classList.add("invalid");
     }
 
-    // Check to see if there are capital letters
+    // SAR: Check to see if there are capital letters
     var upperCaseLetters = /[A-Z]/;
     if (password.value.match(upperCaseLetters)) {
         capital.classList.remove("invalid");
@@ -37,7 +37,7 @@ password.onkeyup = function pswCheck () {
         capital.classList.add("invalid");
     }
 
-    // Check to see if there are numbers
+    // SAR: Check to see if there are numbers
     var numbers = /[0-9]/;
     if (password.value.match(numbers)){
         number.classList.remove("invalid");
@@ -47,8 +47,7 @@ password.onkeyup = function pswCheck () {
         number.classList.add("invalid");
     }
 
-
-    // Check to see if length is greater than 8
+    // SAR: Check to see if length is greater than 8
     if (password.value.length >= 8) {
         length.classList.remove("invalid");
         length.classList.add("valid");
@@ -58,7 +57,7 @@ password.onkeyup = function pswCheck () {
     }
 };
 
-// Here we create the variables and assign them to their respective id values.
+// SAR: Here we create the variables and assign them to their respective id values.
 var fullname = document.getElementById("fullname");
 var birthday= document.getElementById("birthday");
 var email = document.getElementById("email");
@@ -66,26 +65,26 @@ var psw = document.getElementById("psw");
 var userName = document.getElementById("userName");
 var teleNmb= document.getElementById("teleNmb");
 
-// We now create a series of "if" statements, which will check to see if the user registers correctly.
+// SAR: We now create a series of "if" statements, which will check to see if the user registers correctly.
 // All of them will be contained in a function which is called upon from the submit form in registration.html
 function UserCreationControl() {
     var messageAlert = "";
     var booleanCheck = true;
 
-    // "if" statement to control if user has entered a name
+    // SAR: "if" statement to control if user has entered a name
     if (fullname.value===""){
        messageAlert += "Please enter your name ";
        booleanCheck = false;
        console.log(messageAlert, booleanCheck)
     }
 
-    // "if" statement to control if user has entered a date of birth
+    // SAR: "if" statement to control if user has entered a date of birth
     if (birthday.value===""){
         messageAlert += "Please enter your date of birth ";
         booleanCheck = false;
     }
 
-    // "if" statement to control that the given date of birth is less than today's date
+    // SAR: "if" statement to control that the given date of birth is less than today's date
     var dateGiven = birthday;
     var dateToday = new Date();
     dateGiven = new Date(dateGiven);
@@ -94,34 +93,34 @@ function UserCreationControl() {
         booleanCheck = false;
     }
 
-    // "if" statement to check if user has entered a contact email
+    // SAR: "if" statement to check if user has entered a contact email
     if (email.value===""){
         messageAlert += "Please enter you contact email ";
         booleanCheck = false;
     }
 
-    // "if" statement to check if user has entered a password
+    // SAR: "if" statement to check if user has entered a password
     if (psw.value===""){
         messageAlert += "Please enter a correct password ";
         booleanCheck = false;
     }
 
-    // "if" statement to check if user has entered
+    // SAR: "if" statement to check if user has entered
     if (userName===""){
         messageAlert += "Please enter a Username ";
         booleanCheck = false;
     }
 
-    // "if" statement to check if user has entered a contact number
+    // SAR: "if" statement to check if user has entered a contact number
     if (teleNmb===""){
         messageAlert += "Please enter a contact number ";
         booleanCheck = false;
     }
 
-    // "if" statement to check if the booleanCheck is false. If it is false, then the input from the user does not meet
-    // the criteria for one or more of the above "if" statements. It then alerts the user to which of the statements
-    // are filled incorrectly. If the booleanCheck is true, then the user has filled out the form correctly and a
-    // new user is created using the createUser function.
+    // SAR: "if" statement to check if the booleanCheck is false. If it is false, then the input from the user does not
+    // meet the criteria for one or more of the above "if" statements. It then alerts the user to which of the
+    // statements are filled incorrectly. If the booleanCheck is true, then the user has filled out the form correctly
+    // and a new user is created using the createUser function.
     if (booleanCheck === false){
         alert(messageAlert);
     } else {
@@ -130,7 +129,7 @@ function UserCreationControl() {
 }
 
 
-// We create an if statement to check if there are any users stored in localStorage.
+// SAR: We create an if statement to check if there are any users stored in localStorage.
 // If not, we create a new user array which is empty, if yes, we continue with the current array.
 var allUsers
 if(localStorage.getItem("User") == null){
@@ -143,13 +142,13 @@ if(localStorage.getItem("User") == null){
     console.log(allUsers);
 }
 
-// We now create a function which creates a user array of the input-data.
+// SAR: We now create a function which creates a user array of the input-data.
 function createUser () {
     allUsers.push(new User(fullname.value, email.value, teleNmb.value, birthday.value, userName.value, psw.value));
     localStorage.setItem("User", JSON.stringify(allUsers));
     console.log(localStorage.getItem("User"));
 
-    /* This was the old code which worked for one user but was overwritten if multiple users were created.
+    /* SAR: This was the old code which worked for one user but was overwritten if multiple users were created.
     localStorage.setItem("fullname", fullname.value);
     localStorage.setItem("birthday", birthday.value);
     localStorage.setItem("email", email.value);
