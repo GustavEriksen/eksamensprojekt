@@ -43,7 +43,7 @@ function showSlides(n) {
     }
 
     // Makes the modal only show one picture at a time.
-    for (i = 0; i < slides.length; i++) {
+    for (i = 0; i < slides.length; i++) { 
         slides[i].style.display = "none";
     }
 

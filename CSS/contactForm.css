@@ -10,8 +10,8 @@ input[type=text], input[type=number], textarea, input[type=email] {
 
 /* Style for the submit button */
 .sendContact {
-    background-color: #4CAF50;
-    color: white;
+    background-color: rgb(118,210,187,0.8);
+    color: black;
     padding: 16px 20px;
     margin: 8px 0;
     border: none;
@@ -49,6 +49,7 @@ input[type=text], input[type=number], textarea, input[type=email] {
     bottom: 10px;
     left: 75px;
     border: 3px solid #f1f1f1;
+    box-shadow: -10px 10px 8px rgb(0,0,0,0.5);
 }
 
 /* Styles for the contact form */
@@ -67,8 +68,8 @@ input[type=text], input[type=number], textarea, input[type=email] {
 
 /* Set a style for the Close button */
 .contactClass .btn {
-    background-color: #4CAF50;
-    color: white;
+    background-color: rgb(201,201,201,0.5);
+    color: black;
     padding: 16px 20px;
     border: none;
     cursor: pointer;
@@ -79,7 +80,7 @@ input[type=text], input[type=number], textarea, input[type=email] {
 
 /* Add a red background color to the Close button */
 .contactClass .cancel {
-    background-color: red;
+    background-color: rgb(201,201,201,0.5);
 }
 
 /* Add some hover effects to open/close buttons */
