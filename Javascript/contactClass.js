@@ -6,3 +6,4 @@ class contactInfo {
         this.message = message;
     }
 }
+

@@ -1,4 +1,4 @@
-// This is our User class. It contains the information required for making an account which will grant access to
+// SAR: This is our User class. It contains the information required for making an account which will grant access to
 // making future bookings.
 class User {
     constructor(fullname, email, telephone, birthday, userName, password) {

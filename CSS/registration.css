@@ -7,15 +7,14 @@ body{
     background-color: black;
 }
 
-
-/* Creating the login-page design */
+/* SAR: Creating the login-page design */
 .login-page{
     width: 360px;
     padding: 10% 0 0;
     margin: auto;
 }
 
-/* Creating the login-form design */
+/* SAR: Creating the login-form design */
 .form{
     position: relative;
     z-index: 1;
@@ -26,7 +25,7 @@ body{
     text-align: center;
 }
 
-/* Creating the style for the login input */
+/* SAR: Creating the style for the login input */
 .form input{
     font-family: "Roboto Light", sans-serif;
     outline: 1;
@@ -39,7 +38,7 @@ body{
     font-size: 14px;
 }
 
-/* Creating the style for the Register button */
+/* SAR: Creating the style for the Register button */
 .form input[type=submit] {
     font-family: "Roboto Light", sans-serif;
     text-transform: uppercase;
@@ -53,13 +52,13 @@ body{
     cursor: pointer;
 }
 
-/* Creating the Hover effect for the button */
+/* SAR: Creating the Hover effect for the button */
 .form input[type=submit]:hover,.form input[type=submit]:active{
     background: #43A047;
     color: white;
 }
 
-/* Styling the message box that is shown when the user clicks on the password field */
+/* SAR: Styling the message box that is shown when the user clicks on the password field */
 #message {
     display:none;
     background: rgba(169, 169, 169, 0.8);
@@ -81,7 +80,7 @@ body{
     font-size: 18px;
 }
 
-/* Add a green text color and a checkmark when the requirements are right */
+/* SAR: Add a green text color and a checkmark when the requirements are right */
 .valid {
     color: green;
 }
@@ -92,7 +91,7 @@ body{
     content: "\2713";
 }
 
-/* Add a red text color and an "x" icon when the requirements are wrong */
+/* SAR: Add a red text color and an "x" icon when the requirements are wrong */
 .invalid {
     color: red;
 }
@@ -103,20 +102,20 @@ body{
     content: "\292B";
 }
 
-/* Creating the style for the bottom message on the login form */
+/* SAR: Creating the style for the bottom message on the login form */
 .form .message{
     margin: 15px 0 0;
     color: aliceblue;
     font-size: 12px;
 }
 
-/* Making it so that when clicked, the link won't change colour */
+/* SAR: Making it so that when clicked, the link won't change colour */
 .form .message a{
     color: #4CAF50;
     text-decoration: none;
 }
 
-/* Making the login-form invisible unless clicked to */
+/* SAR: Making the login-form invisible unless clicked to */
 .form .login-form{
     display: none;
 }
