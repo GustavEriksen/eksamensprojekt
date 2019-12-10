@@ -82,7 +82,7 @@ if (JSON.parse(localStorage.getItem("currentUser")) == null){
         lastId++; //Creates unique ID for latest booking
     }
 
-    // Function which adds booking to the Booking List, where Admin can delete and change status of the booking and then show the list of bookings
+    // Function which adds booking to the booking List, where Admin can delete and change status of the booking and then show the list of bookings
     function addBookToList(book) {
 
         var removeIcon = document.createElement('span'); //Remove Icon
