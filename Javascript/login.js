@@ -1,9 +1,10 @@
 // SAR: Create submit for sign-up and log-in.
 var submit = document.getElementById('submit');
 var login = document.getElementById('login');
-console.log(login) // check to see if login works and what it pulls
+console.log(login); // check to see if login works and what it pulls
 
-// SAR: Creating a variable "existingUser" which pulls the string information from localStorage (server) and sets it to an object.
+// SAR: Creating a variable "existingUser" which pulls the string information from localStorage (server) and sets it
+// to an object.
 var existingUser = JSON.parse(localStorage.getItem('User'));
 
 // SAR: Creating a variable "currentLogin" which we push the login info to as a string later in the script.

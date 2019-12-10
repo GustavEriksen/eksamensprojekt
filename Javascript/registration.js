@@ -131,9 +131,9 @@ function UserCreationControl() {
 
 // SAR: We create an if statement to check if there are any users stored in localStorage.
 // If not, we create a new user array which is empty, if yes, we continue with the current array.
-var allUsers
+var allUsers;
 if(localStorage.getItem("User") == null){
-    allUsers = []
+    allUsers = [];
     console.log(allUsers);
     console.log("Admin Only");
 } else {
