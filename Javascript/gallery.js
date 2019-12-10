@@ -30,6 +30,12 @@ function currentSlide(n) {
 function showSlides(n) {
     var i;
 
+    /* NF: You could make greater use og OOP for the above,
+    so that several functions (methods) with the same purpose
+    could be of one function */
+
+
+
     // Defining the variables with the values from the HTML classes and Id which will be used within the script.
     var slides = document.getElementsByClassName("gallerySlides");
     var smallSlides = document.getElementsByClassName("modalSmall");
@@ -62,3 +68,5 @@ function showSlides(n) {
     // Shows the caption text that belongs to the picture.
     captionText.innerHTML = smallSlides[slideIndex-1].alt;
 }
+
+/* NF: Great use of the functions above, simple and readable */
