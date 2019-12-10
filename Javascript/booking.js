@@ -2,9 +2,6 @@
 if (JSON.parse(localStorage.getItem("currentUser")) == null){
     alert("You need to be logged in to make a booking request");
     document.location.href = "home.html";
-    var x = document.getElementById("mydiv"); //skal IKKE hedde mydiv og var x !!!
-    if (x.style.display === "none") {
-        x.style.display = "block";
     var bookingdiv = document.getElementById("booking-div");
     if (bookingdiv.style.display === "none") { // SAR: Suggestion: Explain shortly what this "if" statement does.
         bookingdiv.style.display = "block";
