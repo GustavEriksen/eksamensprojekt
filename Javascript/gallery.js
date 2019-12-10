@@ -10,13 +10,10 @@ function closeModal() {
     document.getElementById("galleryModal").style.display = "none";
 }
 
-<<<<<<< HEAD
 
-var slideIndex = 1;
-=======
+
 var slideIndex;
 slideIndex = 0;
->>>>>>> 55ea302bd6645ce5cd94ed7528a25b25baae7d0c
 showSlides(slideIndex);
 
 // This is the function for the Prev/Next buttons in the Modal
