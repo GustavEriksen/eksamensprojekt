@@ -196,6 +196,12 @@ hr {
     width: 80%;
 }
 
+#hamBarWrapper {
+    display: none;
+    height: 100vh;
+    width: 120%;
+}
+
 .contactContent {
     position: absolute;
     top: 150px;

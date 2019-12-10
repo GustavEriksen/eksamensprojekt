@@ -3,7 +3,7 @@
 var password = document.getElementById("psw");
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
-var length = document.getElementById("length");
+var length = document.getElementById("length"); // LS: Nice starting off defining variables outside functions.
 
 // SAR: Script to show a message box when password field is clicked
 password.onfocus = function showPswCheck () {
@@ -55,7 +55,7 @@ password.onkeyup = function pswCheck () {
         length.classList.remove("valid");
         length.classList.add("invalid");
     }
-};
+}; //LS: Nice function which sets a bunch of requirements for the user. The overview is generally good here and the code makes sense. I wouldn't change a thing.
 
 // SAR: Here we create the variables and assign them to their respective id values.
 var fullname = document.getElementById("fullname");
@@ -63,7 +63,7 @@ var birthday= document.getElementById("birthday");
 var email = document.getElementById("email");
 var psw = document.getElementById("psw");
 var userName = document.getElementById("userName");
-var teleNmb= document.getElementById("teleNmb");
+var teleNmb= document.getElementById("teleNmb"); //LS: Once again, nice starting of defining variables outside the function.
 
 // SAR: We now create a series of "if" statements, which will check to see if the user registers correctly.
 // All of them will be contained in a function which is called upon from the submit form in registration.html
@@ -75,7 +75,7 @@ function UserCreationControl() {
     if (fullname.value===""){
        messageAlert += "Please enter your name ";
        booleanCheck = false;
-       console.log(messageAlert, booleanCheck)
+       console.log(messageAlert, booleanCheck) //LS: Console is only needed if you have to test. For final version I wouldn't want this to display in console.
     }
 
     // SAR: "if" statement to control if user has entered a date of birth
@@ -115,18 +115,18 @@ function UserCreationControl() {
     if (teleNmb===""){
         messageAlert += "Please enter a contact number ";
         booleanCheck = false;
-    }
+    } // LS: Nice function which is seperated nicely. Good job!
 
     // SAR: "if" statement to check if the booleanCheck is false. If it is false, then the input from the user does not
     // meet the criteria for one or more of the above "if" statements. It then alerts the user to which of the
     // statements are filled incorrectly. If the booleanCheck is true, then the user has filled out the form correctly
-    // and a new user is created using the createUser function.
+    // and a new user is created using the createUser function.         //LS: good description
     if (booleanCheck === false){
         alert(messageAlert);
     } else {
         createUser();
     }
-}
+};
 
 
 // SAR: We create an if statement to check if there are any users stored in localStorage.
@@ -140,7 +140,7 @@ if(localStorage.getItem("User") == null){
     allUsers = JSON.parse(localStorage.getItem("User"))
     console.log("Current users found in localStorage:")
     console.log(allUsers);
-}
+} //LS: remember to use ";" to finish the code/script
 
 // SAR: We now create a function which creates a user array of the input-data.
 function createUser () {
@@ -159,4 +159,4 @@ function createUser () {
     alert("New user created. You will now be redirected to the homepage for login");
     document.location.href = "../HTML/home.html";
     console.log(localStorage);
-}
+} //LS: remember to use ";" to finish the code/script

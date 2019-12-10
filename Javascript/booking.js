@@ -2,16 +2,26 @@
 if (JSON.parse(localStorage.getItem("currentUser")) == null){
     alert("You need to be logged in to make a booking request");
     document.location.href = "home.html";
+<<<<<<< HEAD
+    var x = document.getElementById("mydiv"); //skal IKKE hedde mydiv og var x !!!
+    if (x.style.display === "none") {
+        x.style.display = "block";
+=======
     var bookingdiv = document.getElementById("booking-div");
     if (bookingdiv.style.display === "none") { // SAR: Suggestion: Explain shortly what this "if" statement does.
         bookingdiv.style.display = "block";
+>>>>>>> 55ea302bd6645ce5cd94ed7528a25b25baae7d0c
     } else {
         bookingdiv.style.display = "none";
     }
 }
 
+<<<<<<< HEAD
+// Booking saving in LocalStorage + Admin Access
+=======
 // Booking saving in LocalStorage + Admin Access. IIFE function
 // SAR: Suggestion: Give a more detailed explanation on what purpose the following code segment has and why it has to repeat itself as an IIFE function.
+>>>>>>> 55ea302bd6645ce5cd94ed7528a25b25baae7d0c
 
 (function() {
 
@@ -69,7 +79,10 @@ if (JSON.parse(localStorage.getItem("currentUser")) == null){
             bookChildren: document.getElementById("book_children").value,
             bookComments: document.getElementById("book_comments").value,
             bookStatus: ("Pending").value, //All bookings has an undefined booking status --> admin has to change to "accepted" or "denied"
+<<<<<<< HEAD
+=======
                                             // SAR: Well explained
+>>>>>>> 55ea302bd6645ce5cd94ed7528a25b25baae7d0c
         }
         alert("Your reservation has been sent to Vivian. You will be notified when the reservation request has been accepted/denied.");
         //Makes an alert in browser, so user can see the booking has been sent.
@@ -82,7 +95,17 @@ if (JSON.parse(localStorage.getItem("currentUser")) == null){
         lastId++; //Creates unique ID for latest booking
     }
 
+<<<<<<< HEAD
     // Function which adds booking to the booking List, where Admin can delete and change status of the booking and then show the list of bookings
+=======
+<<<<<<< HEAD
+    // Function which adds booking to the Booking List,
+    // where Admin can delete and change status of
+    // the booking and then shows the list of bookings
+=======
+    // Function which adds booking to the Booking List, where Admin can delete and change status of the booking and then show the list of bookings
+>>>>>>> 55ea302bd6645ce5cd94ed7528a25b25baae7d0c
+>>>>>>> a3abdefda40f4b45efa9c650d8d305d53ef7a177
     function addBookToList(book) {
 
         var removeIcon = document.createElement('span'); //Remove Icon
@@ -150,7 +173,7 @@ if (JSON.parse(localStorage.getItem("currentUser")) == null){
         bookList = JSON.parse(window.localStorage.getItem('bookList'));
     }
 
-    //Function which shows the lastest booking as the last booking on the Booking List
+    //Function which shows the latest booking as the last booking on the Booking List
     function getLastBookId() {
         var lastBook = bookList[bookList.length - 1];
         lastId = lastBook.bookId + 1;
