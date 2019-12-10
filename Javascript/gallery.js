@@ -26,13 +26,13 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
+/* NF: You could make greater use og OOP for the above,
+    so that several functions (methods) with the same purpose
+    could be of one function */
+
 // This toggles the correct slides.
 function showSlides(n) {
     var i;
-
-    /* NF: You could make greater use og OOP for the above,
-    so that several functions (methods) with the same purpose
-    could be of one function */
 
 
 

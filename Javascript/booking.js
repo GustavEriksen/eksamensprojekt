@@ -19,13 +19,13 @@ if (JSON.parse(localStorage.getItem("currentUser")) == null){
 
     'use strict';
     /* Defining variables which we are using throughout the script. */
-    var lastId = 0;                                                                // Creating id's for each booking
-    var bookWrapper = document.getElementById("book_wrapper");          // Wrapping all bookings
-    var btnSave = document.getElementById("save_book");                // Button which saves each booking
-    var removeIcon;                                                             // Admin can remove a booking
-    var updateIcon;                                                            // Admin can update the status of the booking
-    var bookList;                                                             // booking list
-                                                                                // SAR: Well described
+    var lastId = 0;                                                         // Creating id's for each booking
+    var bookWrapper = document.getElementById("book_wrapper");    // Wrapping all bookings
+    var btnSave = document.getElementById("save_book");           // Button which saves each booking
+    var removeIcon;                                                         // Admin can remove a booking
+    var updateIcon;                                                         // Admin can update the status of the booking
+    var bookList;                                                           // booking list
+                                                                            // SAR: Well described
 
     // book or Book is short for booking or Booking
 
@@ -90,9 +90,9 @@ if (JSON.parse(localStorage.getItem("currentUser")) == null){
     // Function which adds booking to the Booking List,
     // where Admin can delete and change status of
     // the booking and then shows the list of bookings
-    // Function which adds booking to the Booking List, where Admin can delete and change status of the booking and then show the list of bookings
 
-
+    // Function which adds booking to the Booking List,
+    // where Admin can delete and change status of the booking and then show the list of bookings
     function addBookToList(book) {
 
         var removeIcon = document.createElement('span'); //Remove Icon
