@@ -18,46 +18,45 @@ function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
-// Function to click and show a photo in the gallery
+// Function to click on a thumbnail image and show it in the modal.
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
-// This is the loop for the gallery page.
+// This toggles the correct slides.
 function showSlides(n) {
+    var i;
 
     // Defining the variables with the values from the HTML classes and Id which will be used within the script.
-    var i;
     var slides = document.getElementsByClassName("gallerySlides");
     var smallSlides = document.getElementsByClassName("modalSmall");
     var captionText = document.getElementById("caption");
 
-    // Makes it possible to go from image 7 -> 8 -> 1.
+    // If slide 'n' is greater than the total number of slides
     if (n > slides.length) {
         slideIndex = 1
     }
 
-    // Makes it possible to go from image 2 -> 1 -> 8.
+    // If slide 'n' is less than total number of slides
     if (n < 1) {
         slideIndex = slides.length
     }
 
-    // Makes the modal only show one picture at a time.
     for (i = 0; i < slides.length; i++) { 
         slides[i].style.display = "none";
     }
 
-    // Gives the same small image in the modal (smallSlides/modalSmall), a highlight effect, if it is the same as the big image in the modal (gallerySlides)
     for (i = 0; i < smallSlides.length; i++) {
         smallSlides[i].className = smallSlides[i].className.replace(" active", "");
     }
 
-    // style.display shows the picture.
+    // style.display shows the image.
     slides[slideIndex-1].style.display = "block";
 
-    // Gives the highlight effect, if the 'slides' is active, otherwise it has a shadow.
+    <!--If the thumbnail image in the gallery modal is small, the CSS display changes to active
+    and it will no longer have the opacity effect.-->
     smallSlides[slideIndex-1].className += " active";
 
-    // Shows the caption text that belongs to the picture.
+    // Shows the caption text that belongs to the chosen image.
     captionText.innerHTML = smallSlides[slideIndex-1].alt;
 }
