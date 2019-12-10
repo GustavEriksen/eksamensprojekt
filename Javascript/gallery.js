@@ -1,6 +1,6 @@
 // The gallery JS is made with inspiration from: https://www.w3schools.com/howto/howto_js_lightbox.asp
 
-// The function 'openModal' will open the div 'galleryModal' when clicking on a picture.
+// The function 'openModal' will open the div 'galleryModal' when clicking on an image.
 function openModal() {
     document.getElementById("galleryModal").style.display = "block";
 }
@@ -42,10 +42,9 @@ function showSlides(n) {
         slideIndex = slides.length
     }
 
-    for (i = 0; i < slides.length; i++) { 
+    for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-
     for (i = 0; i < smallSlides.length; i++) {
         smallSlides[i].className = smallSlides[i].className.replace(" active", "");
     }
@@ -53,10 +52,10 @@ function showSlides(n) {
     // style.display shows the image.
     slides[slideIndex-1].style.display = "block";
 
-    <!--If the thumbnail image in the gallery modal is small, the CSS display changes to active
-    and it will no longer have the opacity effect.-->
+    /* If the thumbnail image in the gallery modal is small, the CSS display changes to active
+   and it will no longer have the opacity effect. */
     smallSlides[slideIndex-1].className += " active";
 
-    // Shows the caption text that belongs to the chosen image.
+    // Shows the caption text that belongs to the picture.
     captionText.innerHTML = smallSlides[slideIndex-1].alt;
 }
