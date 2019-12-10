@@ -3,7 +3,7 @@ if (JSON.parse(localStorage.getItem("currentUser")) == null){
     alert("You need to be logged in to make a booking request");
     document.location.href = "home.html";
     var bookingdiv = document.getElementById("booking-div");
-    if (bookingdiv.style.display === "none") {
+    if (bookingdiv.style.display === "none") { // SAR: Suggestion: Explain shortly what this "if" statement does.
         bookingdiv.style.display = "block";
     } else {
         bookingdiv.style.display = "none";
@@ -11,6 +11,7 @@ if (JSON.parse(localStorage.getItem("currentUser")) == null){
 }
 
 // Booking saving in LocalStorage + Admin Access. IIFE function
+// SAR: Suggestion: Give a more detailed explanation on what purpose the following code segment has and why it has to repeat itself as an IIFE function.
 
 (function() {
 
@@ -20,14 +21,15 @@ if (JSON.parse(localStorage.getItem("currentUser")) == null){
     var bookWrapper = document.getElementById("book_wrapper");          // Wrapping all bookings
     var btnSave = document.getElementById("save_book");                // Button which saves each booking
     var removeIcon;                                                             // Admin can remove a booking
-    var updateIcon;                                                            // Adin can update the status of the booking
+    var updateIcon;                                                            // Admin can update the status of the booking
     var bookList;                                                             // booking list
+                                                                                // SAR: Well described
 
     // book or Book is short for booking or Booking
 
     //Function which loads the booking list whenever the page is loaded or each time a booking gets manually added by the Admin
     function load() {
-
+// SAR: Suggestion: Maybe explain how the code works and why it uses an "if-else" statement with arrays?
         if (!!(window.localStorage.getItem('bookList'))) {
             bookList = JSON.parse(window.localStorage.getItem('bookList'));
         } else {
@@ -67,9 +69,10 @@ if (JSON.parse(localStorage.getItem("currentUser")) == null){
             bookChildren: document.getElementById("book_children").value,
             bookComments: document.getElementById("book_comments").value,
             bookStatus: ("Pending").value, //All bookings has an undefined booking status --> admin has to change to "accepted" or "denied"
+                                            // SAR: Well explained
         }
         alert("Your reservation has been sent to Vivian. You will be notified when the reservation request has been accepted/denied.");
-        //Makes an alert i browser, so user can see the booking has been sent.
+        //Makes an alert in browser, so user can see the booking has been sent.
 
 
         bookList.push(book); //pushes the new booking to the booking list
@@ -132,7 +135,7 @@ if (JSON.parse(localStorage.getItem("currentUser")) == null){
             if (value.bookId == bookId) {
                 bookList.splice(i, 1);
             }
-        })
+        });
         syncBook();
     }
 
@@ -170,6 +173,7 @@ if (JSON.parse(localStorage.getItem("currentUser")) == null){
         }
     }
 
+    // SAR: Comment: What does the function findBook do precisely and how does it do it?
     function findBook(id) {
 
         var response = {
@@ -192,3 +196,5 @@ if (JSON.parse(localStorage.getItem("currentUser")) == null){
     load();
 })();
 
+/* SAR: Comment: Overall, well written code. Could at times wish that there was a more detailed explanation on why and how the code works as it does.
+It can get confusing to someone who has not sat with the code to understand all the functions and their purpose. */
