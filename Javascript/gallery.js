@@ -6,6 +6,7 @@ function closeModal() {
     document.getElementById("galleryModal").style.display = "none";
 }
 
+
 var slideIndex = 1;
 showSlides(slideIndex);
 

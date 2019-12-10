@@ -2,7 +2,7 @@
 if (JSON.parse(localStorage.getItem("currentUser")) == null){
     alert("You need to be logged in to make a booking request");
     document.location.href = "home.html";
-    var x = document.getElementById("mydiv");
+    var x = document.getElementById("mydiv"); //skal IKKE hedde mydiv og var x !!!
     if (x.style.display === "none") {
         x.style.display = "block";
     } else {
@@ -10,7 +10,7 @@ if (JSON.parse(localStorage.getItem("currentUser")) == null){
     }
 }
 
-// Booking saving in LocalStorage + Admin Acces
+// Booking saving in LocalStorage + Admin Access
 
 (function() {
 
@@ -20,7 +20,7 @@ if (JSON.parse(localStorage.getItem("currentUser")) == null){
     var bookWrapper = document.getElementById("book_wrapper");          // Wrapping all bookings
     var btnSave = document.getElementById("save_book");                // Button which saves each booking
     var removeIcon;                                                             // Admin can remove a booking
-    var updateIcon;                                                            // Adin can update the status of the booking
+    var updateIcon;                                                            // Admin can update the status of the booking
     var bookList;                                                             // booking list
 
     // book or Book is short for booking or Booking
@@ -67,7 +67,7 @@ if (JSON.parse(localStorage.getItem("currentUser")) == null){
             bookAdults: document.getElementById("book_adults").value,
             bookChildren: document.getElementById("book_children").value,
             bookComments: document.getElementById("book_comments").value,
-            bookStatus: ("Pending").value, //All bookings has an undifined booking status --> admin has to change to "accepted" or "denied"
+            bookStatus: ("Pending").value, //All bookings has an undefined booking status --> admin has to change to "accepted" or "denied"
         }
         alert("Your reservation has been sent to Vivian. You will be notified when the reservation request has been accepted/denied."); //Makes an alert i browser, so user can see the booking has been sent.
 
@@ -79,7 +79,9 @@ if (JSON.parse(localStorage.getItem("currentUser")) == null){
         lastId++; //Creates unique ID for latest booking
     }
 
-    // Function which adds booking to the Booking List, where Admin can delete and change status of the booking and then shows the list of bookings
+    // Function which adds booking to the Booking List,
+    // where Admin can delete and change status of
+    // the booking and then shows the list of bookings
     function addBookToList(book) {
 
         var removeIcon = document.createElement('span'); //Remove Icon
@@ -150,7 +152,7 @@ if (JSON.parse(localStorage.getItem("currentUser")) == null){
         bookList = JSON.parse(window.localStorage.getItem('bookList'));
     }
 
-    //Function which shows the lastest booking as the last booking on the Booking List
+    //Function which shows the latest booking as the last booking on the Booking List
     function getLastBookId() {
         var lastBook = bookList[bookList.length - 1];
         lastId = lastBook.bookId + 1;
