@@ -34,8 +34,6 @@ function currentSlide(n) {
 function showSlides(n) {
     var i;
 
-
-
     // Defining the variables with the values from the HTML classes and Id which will be used within the script.
     var slides = document.getElementsByClassName("gallerySlides");
     var smallSlides = document.getElementsByClassName("modalSmall");
